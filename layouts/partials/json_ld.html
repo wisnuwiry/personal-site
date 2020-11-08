@@ -3,7 +3,7 @@
 	"@context":"http://schema.org",
 	"@type":"WebSite",
 	"name":"{{ .Site.Params.title }}",
-	"url":"{{ .Site.Params.baseURL }}",
+	"url":"{{ .Site.BaseURL }}",
 	"sameAs":[
 		"https://twitter.com/{{.Site.Params.Social.twitter }}",
 		"https://gitlab.com/{{.Site.Params.Social.gitlab }}",
@@ -25,7 +25,7 @@
 	"name": "{{ .Site.Author.name }}",
 	"jobTitle": "{{ .Site.Author.job }}",
 	"gender": "{{ .Site.Author.gender }}",
-	"url": "{{ .Site.Params.baseURL }}",
+	"url": "{{ .Site.BaseURL }}",
 	"sameAs":[
 		"https://twitter.com/{{.Site.Params.Social.twitter }}",
 		"https://gitlab.com/{{.Site.Params.Social.gitlab }}",
@@ -53,7 +53,7 @@
 	"@context": "http://schema.org",
 	"@type": "WebPage",
 	"name": "{{ .Params.title }}",
-	"url": " {{ .Site.Params.baseURL }}{{ .Permalink | absURL }}",
+	"url": " {{ .Site.BaseURL }}{{ .Permalink | absURL }}",
 	"description": "{{- with .Summary }}{{ . | plainify}}{{- end }}"
 }
 </script>
@@ -64,7 +64,7 @@
 	"@type":"BlogPosting",
 	"mainEntityOfPage":{
 		"@type":"WebPage",
-		"@id":"{{ .Site.Params.baseURL }}{{ .Permalink | absURL }}"
+		"@id":"{{ .Site.BaseURL }}{{ .Permalink | absURL }}"
 	},
 	"headline":"{{ .Params.title }}",
 	{{- if not .Date.IsZero }}
