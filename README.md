@@ -8,12 +8,6 @@ This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/personal-site)
 
-[![Deploy to Vercel](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/wisnuwiry/personal-site)
-
-## Content Management
-
-[![import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=wisnuwiry/personal-site&engine=hugo&version=0.74.3)
-
 ## Test Result:
 ![Test Result with Lighthouse](https://i.ibb.co/vvksSnW/test-result.png)
 
