@@ -29,6 +29,17 @@ This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry
 
 Before starting, please be sure that you have [installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you ready to install **MyBlog**.
 
+Create new project hugo
+
+```bash
+hugo new site name_site
+```
+Go to folder themes
+
+```bash
+cd name_site/themes
+```
+
 In your Hugo site themes directory, run:
 
 ```bash
