@@ -1,0 +1,18 @@
+<article class="feed__item">
+	<div>
+		<div class="feed__meta">
+			{{- if .Param "authorbox" }}
+				<img alt="{{ $.Site.Author.name }} avatar" data-src="{{ $.Site.Author.avatar | relURL }}" class="post__author-thumb lazyload" src="{{ "/img/placeholder.svg" | relURL }}">
+				<a class="feed__author invert" href="/about">{{ $.Site.Author.name }}</a>
+				{{- partial "entry/meta/date.html" . }}
+			{{- end }}
+		</div>
+		<h2>
+			<a href="{{ .RelPermalink }}" class="invert">{{ .Title }}</a>
+		</h2>
+		{{- with .Summary }}
+		<p>{{ . }}</p>
+		{{- end }}
+		{{ partial "entry/tags.html" . }}
+	</div>
+</article>

@@ -1,0 +1,26 @@
+<div class="wrapper post__entry">
+    <ul class="post__tag">
+    {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+        {{ $fontUnit := $.Site.Params.fontUnit }}
+        {{ $largestFontSize := $.Site.Params.largestFontSize }}
+        {{ $smallestFontSize := $.Site.Params.smallestFontSize }}
+        {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+        {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+        {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+        {{ $spread := sub $max $min }}
+        {{ $fontStep := div $fontSpread $spread }}
+        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+            {{ $currentTagCount := len $taxonomy.Pages }}
+            {{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep)) }}
+            {{ $count := len $taxonomy.Pages }}
+            {{ $weigth := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+            {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <li>
+                <a href="{{ .RelPermalink }}" style="font-size: {{ $currentFontSize }}{{ $fontUnit }}; margin-bottom: 5px">{{ .LinkTitle | default .Data.Term | default $name }}</a>
+            </li> 
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    </ul>
+</div>

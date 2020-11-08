@@ -1,0 +1,21 @@
+:root{
+    --background-color: #f3f8fb;
+    --text-color: #17181e;
+    --link-color: #1167a9;
+    --primary-color: #1da1f2;
+    --card-color: #ffffff;
+    --white-color: #ffffff;
+    --border-color: #dfe2e5;
+    --disabled-text-color: #647888;
+}
+
+body.dark-theme{
+    --background-color: #0d2538;
+    --text-color: #ffffff;
+    --link-color: #3592da;
+    --primary-color: #1da1f2;
+    --card-color: #0f2d44;
+    --white-color: #ffffff;
+    --border-color: #dfe2e5;
+    --disabled-text-color: #ced8de;
+}

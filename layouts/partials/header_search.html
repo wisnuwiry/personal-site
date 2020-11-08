@@ -1,0 +1,19 @@
+<div class="search">
+	<div class="search__overlay js-search-overlay">
+		<div class="search__overlay-inner">
+			<form action="/search" class="search__form">
+				<input class="search__input js-search-input" type="search" name="q" placeholder="Search..."
+					autofocus="autofocus">
+			</form>
+			<button class="search__close js-search-close" aria-label="Close">Close</button>
+		</div>
+	</div>
+	<button class="search__btn js-search-btn" aria-label="Search">
+		{{ partial "svg/search.svg" }}
+	</button>
+	<button class="search__btn large" aria-label="Switch Theme" id="toggle-theme">
+		<svg viewBox="0 0 24 24">
+			<path id="icon-theme"></path>
+		</svg>
+	</button>
+</div>

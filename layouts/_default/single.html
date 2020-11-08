@@ -1,0 +1,25 @@
+{{ define "main" }}
+	<div class="wrapper post__entry">
+		{{ partial "breadcrumb.html" . }}
+		<div class="single block">
+			<article class="entry">
+				{{- partial "entry/toc.html" . }}
+				<div class="entry__content">
+				{{ .Content }}
+				{{ partial "contact_form.html" . }}
+				{{ partial "search.html" . }}
+				</div>
+				{{ if or (.Param "share") (isset $.Params "tags") }}
+				<footer class="entry__footer">
+					{{ partial "entry/tags.html" . }}
+					{{ partial "entry/share.html" . }}
+					{{ partial "authorbox.html" . }}
+				</footer>
+				{{ end }}
+			</article>
+			<!-- {{ partial "next_prev.html" .}} -->
+		</div>
+	</div>
+	{{ partial "related.html" . }}
+	{{ partial "comments.html" . }}
+{{ end }}

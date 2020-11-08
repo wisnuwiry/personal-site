@@ -1,0 +1,29 @@
+{{ range .Site.Pages.ByDate }}
+    {{ if gt $.Date.Unix .Date.Unix }}
+      {{ $.Scratch.Set "previous" .Permalink }}
+    {{ end }}
+{{ end }}
+{{ range .Site.Pages.ByDate.Reverse }}
+    {{ if lt $.Date.Unix .Date.Unix }}
+      {{ $.Scratch.Set "next" .Permalink }}
+    {{ end }}
+{{ end }}
+
+{{ if or (or (.PrevInSection) (.NextInSection)) }}
+<nav class="post__nav">
+	<div class="post__nav-inner">
+		{{ if $.Scratch.Get "previous" }}
+		<div class="post__nav-prev">
+			⬅️
+			<a href="{{ $.Scratch.Get "previous" }}" class="invert post__nav-link" rel="prev" title="Previous">Previous</a>
+		</div>
+		{{ end }}
+		{{ if $.Scratch.Get "next" }}
+		<div class="post__nav-next">
+			<a href="{{ $.Scratch.Get "next" }}" class="invert post__nav-link" rel="next" title="Next">Next</a>
+			➡️
+		</div>
+		 {{ end }}
+	</div>
+</nav>
+{{ end }}

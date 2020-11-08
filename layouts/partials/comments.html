@@ -1,0 +1,43 @@
+{{ if (.Param "comments")}}
+<section class="post__comments">
+	<!-- {{ template "_internal/disqus.html" . }} -->
+	<div class="wrapper">
+		<h5>💬 Comment:</h5>
+		<div id="comment"></div>
+		
+		<script>
+		    var disqus_loaded = false;
+
+		    function loadDisqus() {
+				var commendId = document.getElementById('comment');
+		        var top = commendId.offsetTop;
+
+		        if (!disqus_loaded && (window.scrollY || window.pageYOffset) + window.innerHeight > top) {
+					disqus_loaded = true;
+					
+		            (function () {
+						var d = document, s = d.createElement('script');
+						s.src = 'https://utteranc.es/client.js';
+						s.setAttribute('repo', '{{ .Site.Params.Comments.repository }}');
+						s.setAttribute('issue-term', 'title');
+						var currentTheme = localStorage.getItem("w-theme");
+						if(currentTheme == 'light'){
+							s.setAttribute('theme', 'github-light');
+						}else{
+							s.setAttribute('theme', 'photon-dark');
+						}
+						s.setAttribute('crossorigin', 'anonymous');
+						s.async = !0;
+						commendId.appendChild(s);
+		            })();
+		        }
+		    }
+
+		    loadDisqus();
+
+		    window.onscroll = function() {
+		        loadDisqus();
+		    };
+		</script>
+</section>
+{{ end }}

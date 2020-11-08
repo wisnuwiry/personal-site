@@ -1,0 +1,8 @@
+{{ if .Params.images }}
+{{ $title := .Params.title }}
+{{ range first 1 .Params.images }}
+<figure class="hero__image hero__image--overlay">
+	<img class="hero__image-img lazyload" data-src="{{ . }}" src="{{ "/img/placeholder.svg" | relURL }}" alt="{{ $title }}"/>
+</figure>
+{{ end }}
+{{ end }}

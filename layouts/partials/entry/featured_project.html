@@ -1,0 +1,7 @@
+{{ if .Params.image }}
+	<figure class="feed__image">
+			<img class="lazyload" data-src="{{ .Params.image }}" src="{{ "/img/placeholder.svg" | relURL }}" alt="
+				{{ .Params.title }}
+			"/>
+	</figure>
+{{- end }}
