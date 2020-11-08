@@ -76,10 +76,6 @@
 	"dateModified":"{{ .Date.Format "2006-01-02T15" }}",
 	{{- end }}
 	"description":"{{- with .Summary }}{{ . | plainify}}{{- end }}",
-	"author":{
-		"@type":"Person",
-		"name":"{{ .Site.Author.name }}"
-	},
 	"isFamilyFriendly": "true",
 	"image": {{if .Params.images }} {{ apply .Params.images "absURL" "." }} {{ else }}[{{.Site.Author.avatar | absURL}}]{{ end}},
 	"wordCount" : "{{ .WordCount }}",
