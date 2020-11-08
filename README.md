@@ -296,7 +296,7 @@ page: true
 ## Maintainers
 1. @wisnuwiry
     
-    ![Wisnuwiry](https://github.com/wisnuwiry.png?size=38)
+    [![Wisnuwiry](https://github.com/wisnuwiry.png?size=38)](https://github.com/wisnuwiry)
 
 
 ## Contributing 
