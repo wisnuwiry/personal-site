@@ -9,9 +9,21 @@ const BASE_CACHE_FILES = [
     '/img/placeholder.svg'
 ];
 
-const NOT_FOUND_CACHE_FILES = [];
+const NOT_FOUND_CACHE_FILES = [
+    '/css/bundle.min.css',
+    '/js/bundle.min.js',
+    '/manifest.json',
+    '/404.html'
+];
 
-const OFFLINE_PAGE = '/index.html';
+const OFFLINE_CACHE_FILES = [
+    '/css/bundle.min.css',
+    '/js/bundle.min.js',
+    '/manifest.json',
+    '/offline/index.html'
+];
+
+const OFFLINE_PAGE = '/offline/index.html';
 const NOT_FOUND_PAGE = '/404.html';
 
 const CACHE_VERSIONS = {
@@ -95,6 +107,12 @@ function installServiceWorker() {
                         return cache.addAll(BASE_CACHE_FILES);
                     }
                 ),
+            caches.open(CACHE_VERSIONS.offline)
+            .then(
+                (cache) => {
+                    return cache.addAll(OFFLINE_CACHE_FILES);
+                }
+            ),
             caches.open(CACHE_VERSIONS.notFound)
                 .then(
                     (cache) => {

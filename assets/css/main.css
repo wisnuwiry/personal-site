@@ -1105,6 +1105,11 @@ textarea {
     font-size: 0.8em;
     padding: 0.5em;
 }
+.post__tag > li {
+    list-style: none;
+    display: inline-block;
+    margin-top: 1.3rem;
+}
 .post__share {
     display: -webkit-box;
     display: -ms-flexbox;
