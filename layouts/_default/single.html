@@ -6,6 +6,7 @@
 				{{- partial "entry/toc.html" . }}
 				<div class="entry__content">
 				{{ .Content }}
+				{{ partial "edit_content.html" . }}
 				{{ partial "contact_form.html" . }}
 				{{ partial "search.html" . }}
 				</div>
