@@ -18,3 +18,7 @@
 .gsc-tabHeader.gsc-tabhInactive {
   color: var(--text-color);
 }
+
+.gs-result .gs-image, .gs-result .gs-promotion-image {
+  display: table-header-group;
+}
