@@ -12,31 +12,32 @@
 		</div>
 	</div>
 	{{ else }}
-		<div class="content">
-			{{ partial "entry/toc.html" . }}
-			<div class="wrapper post__entry">
-				{{ partial "breadcrumb.html" . }}
-				<div class="single block">
-					<article class="entry">
-						<div class="entry__content">
-						{{ .Content }}
-						{{ partial "edit_content.html" . }}
-						{{ partial "contact_form.html" . }}
-						{{ partial "search.html" . }}
-						</div>
-						{{ if or (.Param "share") (isset $.Params "tags") }}
-						<footer class="entry__footer">
-							{{ partial "entry/tags.html" . }}
-							{{ partial "entry/share.html" . }}
-							{{ partial "authorbox.html" . }}
-						</footer>
-						{{ end }}
-					</article>
-					<!-- {{ partial "next_prev.html" .}} -->
-				</div>
+	{{ partial "header_indicator.html" . }}
+	<div class="content">
+		{{ partial "entry/toc.html" . }}
+		<div class="wrapper post__entry">
+			{{ partial "breadcrumb.html" . }}
+			<div class="single block">
+				<article class="entry">
+					<div class="entry__content">
+					{{ .Content }}
+					{{ partial "edit_content.html" . }}
+					{{ partial "contact_form.html" . }}
+					{{ partial "search.html" . }}
+					</div>
+					{{ if or (.Param "share") (isset $.Params "tags") }}
+					<footer class="entry__footer">
+						{{ partial "entry/tags.html" . }}
+						{{ partial "entry/share.html" . }}
+						{{ partial "authorbox.html" . }}
+					</footer>
+					{{ end }}
+				</article>
+				<!-- {{ partial "next_prev.html" .}} -->
 			</div>
 		</div>
-		{{ partial "related.html" . }}
-		{{ partial "comments.html" . }}
+	</div>
+	{{ partial "related.html" . }}
+	{{ partial "comments.html" . }}
 	{{ end }}
 {{ end }}
