@@ -12,10 +12,9 @@
 			{{- . -}}
 		</p>
 		{{- end }}
-		<br>
-		<a href="{{ $.Site.Author.donate }}">
-			<img src="{{ "/img/placeholder.svg" | relURL }}" alt="Donation" data-src="{{ .Site.Author.badge }}" width="120" height="50" class="lazyload">
-		</a>
+		{{ with .Site.Author.donate }}
+			<a href="/donate" class="btn">Support Me</a>
+		{{ end }}
 	</div>
 </div>
 {{- end }}

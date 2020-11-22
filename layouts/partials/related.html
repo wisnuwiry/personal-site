@@ -5,13 +5,12 @@
 <div class="post__related related">
 	<div class="wrapper">
 		<h2 class="h5 related__title">You should also read:</h2>
-		<h3 class="related__title">{{ T "related_title" }}</h3>
 		{{ range $related }}
 		<article class="related__item">
 			<div class="feed__meta">
 				{{ partial "entry/meta/date.html" .}}
 			</div>
-			<h3 class="h1"><a class="invert" href="{{ .RelPermalink }}">{{ .Title }}</a></h3></article>
+			<h3><a class="invert" href="{{ .RelPermalink }}">{{ .Title }}</a></h3></article>
 		{{ end }}
 	</div>
 </div>

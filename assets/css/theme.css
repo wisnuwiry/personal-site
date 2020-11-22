@@ -7,6 +7,8 @@
     --white-color: #ffffff;
     --border-color: #dfe2e5;
     --disabled-text-color: #647888;
+    --inline-code-text: #e24cb2;
+    --inline-code-bg: rgba(212,53,159,0.1);
 }
 
 body.dark-theme{
@@ -16,6 +18,6 @@ body.dark-theme{
     --primary-color: #1da1f2;
     --card-color: #0f2d44;
     --white-color: #ffffff;
-    --border-color: #dfe2e5;
+    --border-color: #17354c;
     --disabled-text-color: #ced8de;
 }

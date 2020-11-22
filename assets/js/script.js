@@ -55,31 +55,16 @@ function changeIconTheme(theme) {
 }
 
 
-// Sticky menu
-var new_scroll_position = 0;
-var last_scroll_position;
-var header = document.getElementById("js-header");
-var stickyMenu = document.getElementById("js-navbar-menu");
 window.addEventListener('scroll', function (e) {
-    last_scroll_position = window.scrollY;
-    if (new_scroll_position < last_scroll_position && last_scroll_position > 40) {
-        header.classList.remove("is-visible");
-        header.classList.add("is-hidden");
-    } else if (new_scroll_position > last_scroll_position) {
-        header.classList.remove("is-hidden");
-        header.classList.add("is-visible");
-        if (stickyMenu) {
-            stickyMenu.classList.add("is-sticky");
-        }
-    }
-    if (last_scroll_position < 1) {
-        header.classList.remove("is-visible");
-        if (stickyMenu) {
-            stickyMenu.classList.remove("is-sticky");
-        }
-    }
-    new_scroll_position = last_scroll_position;
+    onScrollProgress();
 });
+function onScrollProgress() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("indicator").style.width = scrolled + "%";
+}
+
 (function (menuConfig) {
     var defaultConfig = {
         mobileMenuMode: 'overlay',
