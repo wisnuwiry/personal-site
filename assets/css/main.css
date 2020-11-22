@@ -401,7 +401,6 @@ textarea {
     transition: top 0.3s ease 0s;
     width: 100%;
     position: fixed;
-    top: 0.2rem;
 }
 .top.is-hidden{
     top: -7rem;
@@ -544,7 +543,6 @@ textarea {
     -webkit-transition: all 0.24s ease-out;
     -o-transition: all 0.24s ease-out;
     transition: all 0.24s ease-out;
-    top: 0.2rem;
     visibility: hidden;
     width: 100%;
     z-index: 2005;
@@ -804,10 +802,11 @@ textarea {
     max-width: 100%;
 }
 .progress-container{
-    position: fixed;
+    position: sticky;
     width: 100%;
     z-index: 1000;
     background: var(--border-color);
+    top: 3.4rem;
 }
 .scroll-indicator-bar {
     background: linear-gradient(90deg,var(--primary-color),#8ed6fb 50%,#d32e9d);
