@@ -15,7 +15,7 @@
 
 	{{- if ne .p1 .p2 }}
 		<li class="breadcrumb__item">
-			<a class="breadcrumbs__link" href="{{ .p1.RelPermalink }}">{{ $crumbTitle }}</a> &nbsp; ➡️
+			<a class="breadcrumbs__link" href="{{ .p1.RelPermalink }}">{{ $crumbTitle }}</a> &nbsp;
 		</li>
 	{{- else }}
 		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">{{ $crumbTitle }}</li>

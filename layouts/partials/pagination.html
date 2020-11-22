@@ -16,7 +16,7 @@
             {{ $.Scratch.Set "__paginator.shouldEllipse" (not ($.Scratch.Get "__paginator.ellipsed") ) }}
             {{ $.Scratch.Set "__paginator.ellipsed" true }} {{ end }} {{- if $showNumber }}
             <a href="{{ .URL }}" aria-label="Go to page {{ .PageNumber }}"
-                class="pagination-link {{ if eq . $pag }}is-current{{ end }}">{{ .PageNumber }}</a>
+                class="pagination-link {{ if eq . $pag }}active{{ end }}">{{ .PageNumber }}</a>
             {{ else if ($.Scratch.Get "__paginator.shouldEllipse") }}
             <span class="pagination-ellipsis" aria-hidden="true">&hellip;</span>
             {{ end }} {{ end }}

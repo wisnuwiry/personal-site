@@ -2,9 +2,9 @@
 {{- $tocOpen := default .Site.Params.Entry.tocOpen .Params.tocOpen -}}
 
 {{- if $toc }}
-<br>
-<details class="entry__toc toc outline" {{ if $tocOpen }}open{{ end }}>
-	<summary class="toc__title">{{- T "entry_toc" -}} Table Of Content</summary>
+<aside class="tableOfContentContainer" id="tableOfContentContainer">
+	<h3>Table of Content</h3>
+	<br>
 	{{ .TableOfContents }}
-</details>
+</aside>
 {{- end }}

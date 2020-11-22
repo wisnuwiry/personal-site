@@ -174,11 +174,13 @@ body{
 .chroma .lntd:nth-child(2) > pre {
     padding-left: 1rem;
 }
-.chroma {
+.highlight{
     color: var(--code-color);
     background-color: var(--code-bg-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
-.chroma pre{
+pre.chroma{
     padding: 0;
 }
 .chroma .lntd {
