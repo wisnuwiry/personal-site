@@ -55,14 +55,16 @@ function changeIconTheme(theme) {
 }
 
 
-window.addEventListener('scroll', function (e) {
-    onScrollProgress();
-});
-function onScrollProgress() {
+window.onscroll = () =>  {
+    var content = document.getElementById('article');
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var height = content.scrollHeight;
     var scrolled = (winScroll / height) * 100;
-    document.getElementById("indicator").style.width = scrolled + "%";
+    if(scrolled <= 100){
+        document.getElementById("indicator").style.width = scrolled + "%";
+    }else{
+        document.getElementById("indicator").style.width = "100%";
+    }
 }
 
 (function (menuConfig) {
@@ -303,16 +305,19 @@ var searchButton = document.querySelector(".js-search-btn");
 searchOverlay = document.querySelector(".js-search-overlay");
 searchClose = document.querySelector(".js-search-close");
 searchInput = document.querySelector(".js-search-input");
+var header = document.getElementById('js-header');
 
 if (searchButton) {
     searchButton.addEventListener("click", function () {
         searchOverlay.classList.add("expanded");
+        header.classList.add('is-hidden');
         setTimeout(function () {
             searchInput.focus();
         }, 60);
     });
 
     searchClose.addEventListener("click", function () {
+        header.classList.remove('is-hidden');
         searchOverlay.classList.remove('expanded');
     });
 }

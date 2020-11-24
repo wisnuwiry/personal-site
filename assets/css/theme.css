@@ -9,6 +9,7 @@
     --disabled-text-color: #647888;
     --inline-code-text: #e24cb2;
     --inline-code-bg: rgba(212,53,159,0.1);
+    --header-bg: hsla(0,0%,100%,0.9);
 }
 
 body.dark-theme{
@@ -20,4 +21,5 @@ body.dark-theme{
     --white-color: #ffffff;
     --border-color: #17354c;
     --disabled-text-color: #ced8de;
+    --header-bg: rgba(9,26,40,0.88);
 }

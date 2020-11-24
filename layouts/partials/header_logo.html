@@ -1,1 +1,3 @@
-<a class="logo" href="{{ "" | relLangURL }}">{{ .Site.Title }}</a>
+<a class="logo" href="{{ "" | relLangURL }}" title="{{ .Site.Title }}">
+    <img src="/img/placeholder.svg" alt="{{ .Site.Title }}" class="lazyload" data-src="{{ .Site.Author.avatar | relURL}}">
+</a>
