@@ -877,7 +877,8 @@ textarea {
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(180deg,transparent,rgba(0,0,0,0.8));
+    background: linear-gradient(180deg,transparent,rgb(23 23 23 / 65%));
+    backdrop-filter: blur(3px);
 }
 .hero__image > img {
     display: block;
@@ -1262,6 +1263,7 @@ textarea {
 #TableOfContents li,
 #TableOfContents ul {
     margin-top: 0;
+    padding-left: 0;
 }
 .single {
     padding-bottom: 1.2em;
@@ -1313,4 +1315,11 @@ textarea {
     .content > aside.tableOfContentContainer li {
         list-style: none;
     }
+}
+
+aside h3 {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 1rem;
 }
