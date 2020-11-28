@@ -1,7 +1,7 @@
 {{- if and .IsPage (.Param "contact") }}
 <br>
 <br>
-<form action="https://formspree.io/wisnukey1@gmail.com" method="POST">
+<form action="https://formspree.io/f/{{ .Site.Params.formspreeId }}" method="POST">
 	<input type="text" name="Name" placeholder="Full Name" required="">
 	<input type="text" name="Subject" placeholder="Subject">
 	<input type="email" name="Email" placeholder="Email" required="">
