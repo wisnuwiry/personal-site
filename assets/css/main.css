@@ -474,7 +474,7 @@ textarea {
     display: none;
     margin: 0 !important;
     opacity: 0;
-    background: #ffffff2b;
+    background: var(--card-color);
     border-radius: .5rem;
     padding: .24rem 1.3rem;
     text-align: center;
@@ -863,7 +863,6 @@ textarea {
     top: 0;
     width: 100%;
     background: linear-gradient(180deg,transparent,rgb(23 23 23 / 65%));
-    backdrop-filter: blur(3px);
 }
 .hero__image > img {
     display: block;
@@ -1250,6 +1249,18 @@ textarea {
     margin-top: 0;
     padding-left: 0;
 }
+#TableOfContents li {
+    padding: 0.2rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+#TableOfContents li a {
+    color: var(--text-color);
+}
+#TableOfContents li:hover{
+    border-radius: 0.4rem;
+    background: var(--card-color);
+}
 .single {
     padding-bottom: 1.2em;
 }
@@ -1269,6 +1280,7 @@ textarea {
 }
 .pagination__item > a.active{
     background: var(--primary-color);
+    color: var(--white-color);
 }
 .content > aside.tableOfContentContainer{
     display: none;
