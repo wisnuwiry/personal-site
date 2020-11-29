@@ -167,6 +167,9 @@ body{
     --code-go: #44475a;
 } */
 
+.chroma {
+    overflow-x: auto;
+}
 .chroma .lntd:nth-child(1){
     width: 2rem;
     border-right: .15rem solid #17354c;
