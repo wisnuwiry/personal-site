@@ -57,13 +57,15 @@ function changeIconTheme(theme) {
 
 window.onscroll = () =>  {
     var content = document.getElementById('article');
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = content.scrollHeight;
-    var scrolled = (winScroll / height) * 100;
-    if(scrolled <= 100){
-        document.getElementById("indicator").style.width = scrolled + "%";
-    }else{
-        document.getElementById("indicator").style.width = "100%";
+    if(content != null){
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = content.scrollHeight;
+        var scrolled = (winScroll / height) * 100;
+        if(scrolled <= 100){
+            document.getElementById("indicator").style.width = scrolled + "%";
+        }else{
+            document.getElementById("indicator").style.width = "100%";
+        }
     }
 }
 
