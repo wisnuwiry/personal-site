@@ -802,12 +802,13 @@ textarea {
     width: 100%;
     z-index: 1000;
     background: var(--border-color);
-    top: 3.4rem;
+    top: calc(3.4rem * 0.9);
 }
 .scroll-indicator-bar {
     background: linear-gradient(90deg,var(--primary-color),#8ed6fb 50%,#d32e9d);
     width: 0%;
-    height: 0.3rem;
+    height: 0.4rem;
+    border-radius: 0.5rem;
 }
 .wrapper {
     -webkit-box-sizing: content-box;
