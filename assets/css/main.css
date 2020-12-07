@@ -19,6 +19,17 @@ section {
 *:focus{
     outline: none;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.1);
+}
 li {
     list-style: none;
 }
