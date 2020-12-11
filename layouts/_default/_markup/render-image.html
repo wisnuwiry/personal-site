@@ -1,5 +1,6 @@
 <figure class="post__image">
 	<img 
+	itemprop="image"
 	class="lazyload post__image" 
     data-sizes="auto"
     src="/img/placeholder.svg"
@@ -7,4 +8,5 @@
     alt='{{ .Text }}'
     {{ with .Text }} title="{{ . }}"{{ end }}
  	/>
+	<caption></caption>
 </figure>
