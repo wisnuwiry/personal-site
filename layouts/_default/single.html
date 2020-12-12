@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "hero" . }}
 	{{ if .Params.page }}
 	<div class="wrapper post__entry">
 		<div class="single block">
@@ -16,6 +17,7 @@
 	<div class="content">
 		{{ partial "entry/toc.html" . }}
 		<div class="wrapper post__entry">
+			{{ partial "details.html" . }}
 			{{ partial "breadcrumb.html" . }}
 			<div class="single block">
 				<article class="entry" id="article">

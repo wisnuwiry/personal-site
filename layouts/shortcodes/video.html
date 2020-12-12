@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+<video itemprop="video" controls="" width="{{ .Get "width" | default "50%"}}">
+    <source src="{{ .Get "url" }}" type="video/mp4">
+</video>
+{{ end }}

@@ -2,11 +2,11 @@
 	{{ partial "entry/featured.html" . }}
 	<header class="hero__content" {{ if .IsHome }} style="bottom: 10%" {{end}}>
 	<div class="wrapper">
-		<h1>
+		<h1 itemprop="name">
 	{{ if .IsHome }}
 		{{ .Site.Params.Hero.title }}
 	{{ else }}
-		{{ .Params.title | default "Oops, Error 404 Not Found 🚫" }}
+		{{ .Params.title | default "" }}
 	{{ end }}
 		</h1>
 	{{ if .IsHome }}

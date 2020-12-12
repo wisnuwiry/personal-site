@@ -556,7 +556,7 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 3.4rem;
+    height: 3.2rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1297,11 +1297,27 @@ textarea {
 .content > aside.tableOfContentContainer{
     display: none;
 }
+.heading .anchor-link{
+    display: none;
+}
+.heading:hover a{
+    display: inline;
+}
+.property{
+    margin-bottom: 1rem;
+    padding: 0.3rem 1rem 1rem 1rem;
+}
+.property > p {
+    display: inline-block;
+    padding-right: 1rem;
+    margin-top: 0.7rem;
+    width: 100%;
+}
 @media (min-width: 1024px){
     .content {
         display: grid;
-        grid-template-columns: 16em 86%;
-        width: 80%;
+        grid-template-columns: 20vw 75vw;
+        width: 100%;
     }    
     .content > aside.tableOfContentContainer{
         position: sticky;
@@ -1324,6 +1340,9 @@ textarea {
     .content > aside.tableOfContentContainer li {
         list-style: none;
     }
+    .property > p {
+        width: 45%;
+    }
 }
 
 aside h3 {
@@ -1331,4 +1350,14 @@ aside h3 {
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--border-color);
     margin-bottom: 1rem;
+}
+
+.series__item{
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--card-color);
+    margin-bottom: 0.5rem;
+}
+.series__item h2{
+    margin: 0;
 }

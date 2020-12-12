@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="{{ .Site.Params.Manifest.themeColor | default "#1da1f2" }}">
-	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} | {{ end }} {{ .Site.Title }} {{ .Site.Params.subTitle }}{{ end }}</title>
 	<meta name="description"
 		content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 	{{- if .Site.Params.opengraph }}
@@ -66,7 +66,6 @@
 	<div class="site-container">
 		{{ partial "header" . }}
 		<main>
-			{{ partial "hero" . }}
 			{{ block "main" . }}
 			{{- if or .Title .Content }}
 			<div class="page block">

@@ -20,7 +20,7 @@ Pada kesempatan kali ini aku mau mencoba fitur multi-bahasa dengan teknology cro
 
  
 
-> [Alasan-alasan Kenapa Harus Pakai Flutter](https://www.wisnuwiry.space/post/alasan-kenapa-pakai-flutter/)
+> [Alasan-alasan Kenapa Harus Pakai Flutter](https://wisnuwiry.space/post/alasan-kenapa-pakai-flutter/)
 
 Sebelum memulai apa sih yang perlu kita persiapkan?
 
@@ -30,7 +30,7 @@ Ada beberapa yang harus teman-teman persiapkan untuk mengikuti tutorial kali ini
 2. Text Editor VS Code / Android Studio
 3. Extensions Flutter & Dart
 
-> [Rekomendasi Extension Theme Font Visual Studio Code](https://www.wisnuwiry.space/post/rekomendasi-extension-theme-font-vscode/)
+> [Rekomendasi Extension Theme Font Visual Studio Code](https://wisnuwiry.space/post/rekomendasi-extension-theme-font-vscode/)
 
 Untuk membuat fitur lolalization ini perlu Flutter 1.22 atau yang lebih terbaru, jika teman-teman ingin upgrade ke versi terbaru gunakan command ini untuk upgrade:
 

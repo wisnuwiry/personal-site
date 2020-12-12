@@ -217,9 +217,7 @@ Kemudian buatlah page page yang ada di bottom nav terserah teman-teman saja, sam
 
 Berikut hasil preview:
 
-<video controls="" width="50%">
-  	<source src="https://i.imgur.com/Yj2m9WK.mp4" type="video/mp4">
-</video>
+{{<video url="https://i.imgur.com/Yj2m9WK.mp4" >}}
 
 ---
 

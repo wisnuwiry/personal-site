@@ -54,9 +54,14 @@ function changeIconTheme(theme) {
     }
 }
 
+var commentId = document.getElementById('comment');
+var content = document.getElementById('article');
+var disqus_loaded = false;
 
 window.onscroll = () =>  {
-    var content = document.getElementById('article');
+    if(commentId != null){
+        loadComment();
+    }
     if(content != null){
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = content.scrollHeight;
@@ -69,6 +74,28 @@ window.onscroll = () =>  {
     }
 }
 
+function loadComment(){
+    var top = commentId.offsetTop;
+    
+    if (!disqus_loaded && (window.scrollY || window.pageYOffset) + window.innerHeight > top) {
+        disqus_loaded = true;
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://utteranc.es/client.js';
+            s.setAttribute('repo', 'wisnuwiry/blog-v2');
+            s.setAttribute('issue-term', 'title');
+            var currentTheme = localStorage.getItem("w-theme");
+            if(currentTheme == 'light'){
+                s.setAttribute('theme', 'github-light');
+            }else{
+                s.setAttribute('theme', 'photon-dark');
+            }
+            s.setAttribute('crossorigin', 'anonymous');
+            s.async = !0;
+            commentId.appendChild(s);
+        })();
+    }		
+}
 (function (menuConfig) {
     var defaultConfig = {
         mobileMenuMode: 'overlay',

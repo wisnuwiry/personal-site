@@ -487,9 +487,7 @@ Sampai proses saat ini, sudah melalui semua tahapnya, langkah berikutnya tinggal
 
 Berikut contoh preview nya:
 
-<video controls="" width="50%">
-	<source src="https://i.imgur.com/GCsXHAk.mp4" type="video/mp4">
-</video>
+{{<video url="https://i.imgur.com/GCsXHAk.mp4" >}}
 
 Source code bisa teman-teman akses di Github, bisa klik button di bawah ini:
 

@@ -45,7 +45,7 @@ Tanpa berlama-lama lagi ayo langsung ke langkah-langkahnya.
 
 6. Isi `Bing command` dengan simple command untuk search misal: `ehe`, Rekomendasi tidak carakter saja.
 
-7. Isi `Bang URL` dengan url search pada website teman-teman pada contoh ini saya menggunkan URL ini: `https://www.wisnuwiry.space/search.html?q={{{s}}}` dan `{{{s}}}` kode ini sebagai parameter keyword pada pencarian.
+7. Isi `Bang URL` dengan url search pada website teman-teman pada contoh ini saya menggunkan URL ini: `https://wisnuwiry.space/search.html?q={{{s}}}` dan `{{{s}}}` kode ini sebagai parameter keyword pada pencarian.
 
 8. Pilih kategory website kamu dan comment terserah teman-teman saja.
 
