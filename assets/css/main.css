@@ -1261,17 +1261,19 @@ textarea {
     margin-top: 0;
     padding-left: 0;
 }
-#TableOfContents li {
-    padding: 0.2rem 1rem;
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-}
 #TableOfContents li a {
     color: var(--text-color);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    display: flex;
 }
-#TableOfContents li:hover{
-    border-radius: 0.4rem;
+#TableOfContents a:hover{
     background: var(--card-color);
+}
+#TableOfContents ul  li ul {
+    background: var(--card-color);
+    border-left: 0.2rem solid var(--primary-color);
 }
 .single {
     padding-bottom: 1.2em;
@@ -1321,18 +1323,11 @@ textarea {
     }    
     .content > aside.tableOfContentContainer{
         position: sticky;
-        top: 3.4rem;
+        top: 2.4rem;
         align-self: start;
         display: inline-table;
         position: -webkit-sticky;
-        padding: 0 1rem;
         border-right: 0.2rem solid var(--border-color)
-    }
-    #TableOfContents li.active:before {
-        content: "→";
-        display: inline-block;
-        margin-left: -20px;
-        width: 20px;
     }
     .content > aside.tableOfContentContainer ul {
         margin-left: 0;
@@ -1347,7 +1342,7 @@ textarea {
 
 aside h3 {
     font-size: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     border-bottom: 2px solid var(--border-color);
     margin-bottom: 1rem;
 }
