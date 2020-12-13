@@ -1351,12 +1351,11 @@ aside h3 {
     border-bottom: 2px solid var(--border-color);
     margin-bottom: 1rem;
 }
-
 .series__item{
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     background: var(--card-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 .series__item h2{
     margin: 0;
