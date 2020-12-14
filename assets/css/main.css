@@ -1321,6 +1321,10 @@ textarea {
         grid-template-columns: 20vw 75vw;
         width: 100%;
     }    
+     #TableOfContents {
+        height: calc(100vh - 7rem);
+        overflow-y: scroll;
+    }
     .content > aside.tableOfContentContainer{
         position: sticky;
         top: 2.4rem;
