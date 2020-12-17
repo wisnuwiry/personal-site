@@ -1272,8 +1272,8 @@ textarea {
     background: var(--card-color);
 }
 #TableOfContents ul  li ul {
-    background: var(--card-color);
-    border-left: 0.2rem solid var(--primary-color);
+    margin-left: 0.5rem;
+    border-left: 0.2rem solid var(--border-color);
 }
 .single {
     padding-bottom: 1.2em;
@@ -1320,11 +1320,11 @@ textarea {
         display: grid;
         grid-template-columns: 20vw 75vw;
         width: 100%;
-    }    
-     #TableOfContents {
+    } 
+    #TableOfContents {
         height: calc(100vh - 7rem);
         overflow-y: scroll;
-    }
+    }   
     .content > aside.tableOfContentContainer{
         position: sticky;
         top: 2.4rem;
