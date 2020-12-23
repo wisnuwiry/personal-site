@@ -2,7 +2,7 @@
 [![state](https://img.shields.io/badge/state-stable-green.svg)]() [![release](https://img.shields.io/github/release/wisnuwiry/personal-site.svg)](https://github.com/wisnuwiry/personal-site/releases) [![license](https://img.shields.io/github/license/wisnuwiry/personal-site.svg)](LICENSE)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19d195ca-0cec-478e-9cfa-fa9527644a60/deploy-status)](https://app.netlify.com/sites/wisnuwiry/deploys)
 
-This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry.space)
+This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry.space), more reference to example use this theme please check [my blog repo](https://github.com/wisnuwiry/blog-v2)
 
 ## Instant Deploy
 
