@@ -23,7 +23,7 @@ This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry
 
 ## Setup in your workspace
 
-Before starting, please be sure that you have [installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you ready to install **MyBlog**.
+Before starting, please be sure that you have [installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you ready to install **personal-site**.
 
 Create new project hugo
 
