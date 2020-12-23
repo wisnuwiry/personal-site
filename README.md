@@ -4,9 +4,11 @@
 
 This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry.space), more reference to example use this theme please check [my blog repo](https://github.com/wisnuwiry/blog-v2)
 
+<!---
 ## Instant Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/personal-site)
+--->
 
 ## Test Result:
 ![Test Result with Lighthouse](https://i.ibb.co/vvksSnW/test-result.png)
@@ -49,7 +51,7 @@ git submodule add https://github.com/wisnuwiry/personal-site
 Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `MyBlog`:
 
 ```
-theme = "MyBlog"
+theme = "personal-site"
 ```
 
 ### Example Config
@@ -58,7 +60,7 @@ theme = "MyBlog"
 baseURL                       = "https://wisnuwiry.space/"
 languageCode                  = "id"
 title                         = "Wisnuwiry"
-theme                         = "MyBlog"
+theme                         = "personal-site"
 summaryLength                 = 10
 
 [Author] # Used in authorbox
