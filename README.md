@@ -39,16 +39,16 @@ cd name_site/themes
 In your Hugo site themes directory, run:
 
 ```bash
-git clone https://github.com/wisnuwiry/personal-site
+git clone git@github.com:wisnuwiry/personal-site.git
 ```
 
 Or, if you don’t plan to make any significant changes, but want to track and update the theme, you can add it as a git submodule via the following command:
 
 ```bash
-git submodule add https://github.com/wisnuwiry/personal-site
+git submodule add git@github.com:wisnuwiry/personal-site.git
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `MyBlog`:
+Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `personal-site`:
 
 ```
 theme = "personal-site"
@@ -57,7 +57,7 @@ theme = "personal-site"
 ### Example Config
 
 ```
-baseURL                       = "https://wisnuwiry.space/"
+baseURL                       = "https://example.com/"
 languageCode                  = "id"
 title                         = "Wisnuwiry"
 theme                         = "personal-site"
@@ -79,7 +79,6 @@ summaryLength                 = 10
   opengraph                   = true # Enable OpenGraph if true
   twitter_cards               = true # Enable Twitter Cards if true
   mainSections                = ["post"] # Set main page sections
-  projectSections             = ["project"] # Set main page sections
   dateFormat                  = "January 02, 2006" # Change the format of dates
   # customCSS                 = ["css/custom.css"] # Include custom CSS files
   customJS                    = []
@@ -94,12 +93,16 @@ summaryLength                 = 10
   largestFontSize             = 2.5
   smallestFontSize            = 1
   googleSearchConsole         = ""
-  GoogleAnalytics             = ""
-  fb_admins                   = 
-  fb_app_id                   = 
+  # GoogleAnalytics             = ""
+  # fb_admins                   = 
+  # fb_app_id                   = 
   paginateLength              = 5
-  adsenseId                   = 
+  # adsenseId                   = 
   customSearchId              = "004021659876411083349:a2ysxpichpc"
+  endMessagePost              = "Wrong content? "
+  editContentPageLink         = "https://github.com/wisnuwiry/blog-v2/edit/master/content/"
+  formspreeId                 = "xjvperzz"
+  subTitle                    = "Personal site, Blog, and Portfolio"
 
 
 [Params.Hero]
