@@ -4,11 +4,10 @@
 
 This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry.space), more reference to example use this theme please check [my blog repo](https://github.com/wisnuwiry/blog-v2)
 
-<!---
 ## Instant Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/personal-site)
---->
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/hugo-theme-demo)
+
 
 ## Test Result:
 ![Test Result with Lighthouse](https://i.ibb.co/vvksSnW/test-result.png)
