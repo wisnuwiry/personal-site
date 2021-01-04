@@ -7,7 +7,27 @@ This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry
 ## Instant Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/hugo-theme-demo)
+[![Deploy to Vercel](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/wisnuwiry/hugo-theme-demo)
 
+## Content Management
+
+Go to your forestry account and click on `import your site now`. declare your config.toml file [exampleSite] and fill up basic settings .
+
+**Or just click this button for one click installation** [![import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=wisnuwiry/blog-v2&engine=hugo&version=0.74.3&config=exampleSite)
+
+Now mark everything as done, then go to configuration to change the base url . You can put any url but this have to similar as netlify . So for now put a name which you are going to put in netlify as netlify subdomain.
+
+
+## Main Feature:
+1. PWA
+2. Fast Loading
+3. Lazy loading
+4. Full Responsive
+5. Easy Customize
+6. Dynamic Theme
+7. Ready to Ads
+8. Advance SEO (JSON-LD, OpenGraph, TwitterCard, Meta)
+9. etc..
 
 ## Test Result:
 ![Test Result with Lighthouse](https://i.ibb.co/vvksSnW/test-result.png)
