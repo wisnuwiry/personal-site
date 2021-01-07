@@ -7,6 +7,16 @@
 	{{- end }}
 	{{- $mainSections := .Site.Params.mainSections }}
 	{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" $mainSections) .Site.Params.paginateLength }}
+	{{- $featured := (where (where .Site.RegularPages "Type" "in" $mainSections) ".Params.featured" "=" true) }}
+	
+	{{ range first 1  $featured }}
+		<div class="feed">
+			<hr/>
+			{{ .Render "summary" }}
+			<hr/>
+		</div>
+    {{ end }}
+	
 	{{- if gt $paginator.TotalNumberOfElements 0 }}
 		<div class="feed">
 			{{- range $paginator.Pages }}

@@ -886,6 +886,7 @@ textarea {
 .feed {
     padding: 0 4%;
 }
+
 .feed__item {
     background: var(--card-color);
     border-radius: 1rem;
@@ -894,6 +895,9 @@ textarea {
     padding: 3.5rem;
     margin: calc(1.55rem + 0.5vw) auto;
 }
+.featured .feed__item{
+    border: 0.2rem solid var(--primary-color);
+}
 @media screen and (max-width: 650px) {
     .feed__item {
         padding: 1.5rem;
@@ -901,22 +905,6 @@ textarea {
 }
 .feed__item h2 {
     margin-top: 0.7em;
-}
-.feed__image {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    max-width: calc(42rem + 20%);
-    margin: 0;
-}
-.feed__image > img {
-    display: inline-block;
-    height: auto;
-    border-radius: 0.6em;
-    width: 100%;
-}
-.feed__featured {
-    margin: -3.5rem -3.5rem 0 -3.5rem;
-    overflow: hidden;
 }
 .feed__meta {
     -webkit-box-align: center;
