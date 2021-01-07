@@ -7,16 +7,16 @@
     <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
     <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}
     {{ if .Params.isPage }}
-    <changefreq>{{ .Sitemap.ChangeFreqPage || default monthly }}</changefreq>
+    <changefreq>{{ .Sitemap.ChangeFreqPage || default "monthly" }}</changefreq>
     {{ else }}
     {{ with .Sitemap.ChangeFreq }}
     <changefreq>{{ . }}</changefreq>
     {{ end }}
     {{ end }}
     {{ if .Params.isPage }}
-    <priority>{{ .Sitemap.PriorityPage }}</priority>
+    <priority>{{ .Sitemap.PriorityPage || default 0.5}}</priority>
     {{ else }} 
-    <priority>{{ .Sitemap.Priority }}</priority>
+    <priority>{{ .Sitemap.Priority || default 0.5 }}</priority>
     {{ end }}
     {{ if .IsTranslated }}
     {{ range .Translations }}
