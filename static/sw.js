@@ -1,4 +1,4 @@
-const CACHE_VERSION = 3;
+const CACHE_VERSION = 4;
 
 const BASE_CACHE_FILES = [
     '/css/bundle.min.css',

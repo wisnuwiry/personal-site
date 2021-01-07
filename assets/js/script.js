@@ -326,30 +326,7 @@ function loadComment(){
         }
     }
     init();
-})(window.publiiThemeMenuConfig);
-
-
-// Load search input area
-var searchButton = document.querySelector(".js-search-btn");
-searchOverlay = document.querySelector(".js-search-overlay");
-searchClose = document.querySelector(".js-search-close");
-searchInput = document.querySelector(".js-search-input");
-var header = document.getElementById('js-header');
-
-if (searchButton) {
-    searchButton.addEventListener("click", function () {
-        searchOverlay.classList.add("expanded");
-        header.classList.add('is-hidden');
-        setTimeout(function () {
-            searchInput.focus();
-        }, 60);
-    });
-
-    searchClose.addEventListener("click", function () {
-        header.classList.remove('is-hidden');
-        searchOverlay.classList.remove('expanded');
-    });
-}
+})(window.themeMenuConfig);
 
 // Share buttons pop-up
 (function () {

@@ -10,8 +10,8 @@
 	{{- $featured := (where (where .Site.RegularPages "Type" "in" $mainSections) ".Params.featured" "=" true) }}
 	
 	{{ range first 1  $featured }}
-		<div class="feed">
-			<hr/>
+		<div class="feed featured">
+			<h3 class="featured__label">FEATURED </h3>
 			{{ .Render "summary" }}
 			<hr/>
 		</div>
