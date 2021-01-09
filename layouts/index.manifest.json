@@ -2,7 +2,7 @@
   "name": "{{ .Site.Params.Manifest.name | default .Site.Title }}",
   "short_name": "{{ .Site.Params.Manifest.shortName | default .Site.Title }}",
   "display": "{{ .Site.Params.Manifest.display | default "browser" }}",
-  "start_url": "{{ .Site.Params.Manifest.startUrl | default "/" }}",
+  "start_url": "{{ .Site.Params.Manifest.startUrl | default "/?source=pwa" }}",
   "background_color": "{{ .Site.Params.Manifest.backgroundColor | default "#2a2a2a" }}",
   "theme_color": "{{ .Site.Params.Manifest.themeColor | default "#1b1b1b" }}",
   {{- with .Site.Params.Manifest.description }}
@@ -24,6 +24,12 @@
       "src": "/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/icons/maskable_icon_x1.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
