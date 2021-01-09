@@ -167,6 +167,19 @@ body{
     --code-go: #44475a;
 } */
 
+code {
+    font-size: 0.87891rem;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+}
+
+:not(pre)>code{
+    color: var(--inline-code-text);
+    padding: .2rem .33rem;
+    vertical-align: 1%;
+    font-size: .78em;
+    background-color: var(--inline-code-bg);
+}
+
 .chroma {
     overflow-x: auto;
 }
@@ -185,6 +198,7 @@ body{
 }
 pre.chroma{
     padding: 0;
+    line-height: 1.5;
 }
 .chroma .lntd {
     vertical-align: top;

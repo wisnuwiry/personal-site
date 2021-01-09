@@ -192,19 +192,6 @@ ul > li {
     list-style: inherit;
     padding: 0 0 0.28333rem 0.85rem;
 }
-code {
-    font-size: 0.87891rem;
-    font-family: Space Mono,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-}
-
-:not(pre)>code{
-    color: var(--inline-code-text);
-    padding: .2rem .33rem;
-    vertical-align: 1%;
-    font-size: .78em;
-    background-color: var(--inline-code-bg);
-}
-
 table {
     border: 0.2rem solid var(--border-color);
     border-collapse: collapse;
