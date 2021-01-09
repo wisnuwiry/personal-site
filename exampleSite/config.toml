@@ -5,15 +5,16 @@ theme                         = "personal-site"
 summaryLength                 = 10
 
 [Author] # Used in authorbox
-  name                        = "Wisnu G. Saputra"
-  bio                         = "Flutter | Mobile Tech Enthusiast | Software Engineer at KodingWorks. Saya juga suka blogging dan mempelajari hal teknologi baru."
+  name                        = "Jhon Doe"
+  bio                         = ""
   avatar                      = "img/avatar.png"
   job                         = "Software Engineer"
   gender                      = "male"
-  email                       = "wisnuwiry@gmail.com"
+  email                       = "jhon-doe@gmail.com"
 
 
 [Params]
+  subTitle                    = "Personal site, Blog, and Portfolio"
   description                 = "Sebuah catatan dan blog pribadi saya. Saya juga akan membagi tentang pengalaman saya dan teknologi-teknolgi yang saya gunakan/pelajari atau yang sedang populer." # Site Description. Used in meta description
   images                      = ["img/avatar.png"]
   copyright                   = "Wisnuwiry" # Copyright holder, otherwise will use .Site.Title
@@ -39,15 +40,22 @@ summaryLength                 = 10
   # fb_app_id                   = 
   paginateLength              = 5
   # adsenseId                   = 
+
+  # Google Search custom, more info: https://cse.google.com/cse/all
   customSearchId              = "004021659876411083349:a2ysxpichpc"
+
   endMessagePost              = "Wrong content? "
+  
+  # Link repo to edit content
   editContentPageLink         = "https://github.com/wisnuwiry/blog-v2/edit/master/content/"
-  formspreeId                 = "xjvperzz"
-  subTitle                    = "Personal site, Blog, and Portfolio"
+  
+  # Formspree form contact id, more info: https://cse.google.com/cse/all
+  formspreeId                 = ""
+  
 
 
 [Params.Hero]
-  title                       = "A Personal Site By WisnuWiry"
+  title                       = "A Personal Site By Jhon Doe"
   desc                        = "Welcome to my Blog :)"
 
 [Params.Entry]
@@ -59,7 +67,7 @@ summaryLength                 = 10
   previewOnly                 = false # Show only preview featured image
 
 [Params.Comments]
-  repository                  = "wisnuwiry/blog-v2"
+  repository                  = "" # Repository to host your comment, ex: username/repo
 
 # Navigation bar
 [menu]
@@ -99,13 +107,13 @@ weight = 5
   homeText                    = "Home" # Home node text
 
 [Params.Social]
-  twitter                     = "wisnuwiry"
-  telegram                    = "wisnuwiry"
-# instagram                   = "wisnuwiry"
+  twitter                     = "jhon-doe"
+  telegram                    = "jhon-doe"
+# instagram                   = "jhon-doe"
   linkedin                    = "wisnu-saputra"
-  github                      = "wisnuwiry"
-  gitlab                      = "wisnuwiry"
-  medium                      = "wisnuwiry"
+  github                      = "jhon-doe"
+  gitlab                      = "jhon-doe"
+  medium                      = "jhon-doe"
 
 [Params.Share] # Entry Share block
   facebook                    = true

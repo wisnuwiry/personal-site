@@ -54,14 +54,9 @@ function changeIconTheme(theme) {
     }
 }
 
-var commentId = document.getElementById('comment');
 var content = document.getElementById('article');
-var disqus_loaded = false;
 
-window.onscroll = () =>  {
-    if(commentId != null){
-        loadComment();
-    }
+window.addEventListener('scroll', ()=>{
     if(content != null){
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = content.scrollHeight;
@@ -72,30 +67,8 @@ window.onscroll = () =>  {
             document.getElementById("indicator").style.width = "100%";
         }
     }
-}
+});
 
-function loadComment(){
-    var top = commentId.offsetTop;
-    
-    if (!disqus_loaded && (window.scrollY || window.pageYOffset) + window.innerHeight > top) {
-        disqus_loaded = true;
-        (function () {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://utteranc.es/client.js';
-            s.setAttribute('repo', 'wisnuwiry/blog-v2');
-            s.setAttribute('issue-term', 'title');
-            var currentTheme = localStorage.getItem("w-theme");
-            if(currentTheme == 'light'){
-                s.setAttribute('theme', 'github-light');
-            }else{
-                s.setAttribute('theme', 'photon-dark');
-            }
-            s.setAttribute('crossorigin', 'anonymous');
-            s.async = !0;
-            commentId.appendChild(s);
-        })();
-    }		
-}
 (function (menuConfig) {
     var defaultConfig = {
         mobileMenuMode: 'overlay',
@@ -387,3 +360,42 @@ function loadComment(){
         return !!popup;
     }
 })();
+
+function enableStickyToc() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            if (entry.intersectionRatio > 0) {
+                if (delay == true) {
+                    let element = document.querySelectorAll(".tableOfContentContainer li.active");
+                    if(element != null){
+                        element.forEach((e)=>{
+                            e.classList.remove("active");
+                        });
+                    }
+                    delay = false;
+                }
+                let element = document.querySelector(`.tableOfContentContainer li a[href="#${id}"]`);
+                if (element) {
+                    element.parentElement.classList.add("active");   
+                }
+            } else {
+                if (document.querySelectorAll(".tableOfContentContainer li.active").length == 1) {
+                    delay = true;
+                } else {
+                    let element = document.querySelector(`.tableOfContentContainer li a[href="#${id}"]`);
+                    if (element) {
+                        element.parentElement.classList.remove("active");
+                    }
+                }
+            }
+        });
+    });
+    var delay = false;
+    document.querySelectorAll(".content h2[id]").forEach((section) => {
+        observer.observe(section);
+    });
+    document.querySelectorAll(".content h3[id]").forEach((section) => {
+        observer.observe(section);
+    });
+}
