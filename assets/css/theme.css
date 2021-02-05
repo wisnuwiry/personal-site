@@ -10,6 +10,8 @@
     --inline-code-text: #e24cb2;
     --inline-code-bg: rgba(212,53,159,0.1);
     --header-bg: hsla(0,0%,100%,0.9);
+
+    --header-height: 3.4rem;
 }
 
 body.dark-theme{

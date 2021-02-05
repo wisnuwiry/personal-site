@@ -85,7 +85,7 @@ summaryLength                 = 10
 [Author] # Used in authorbox
   name                        = "Jhon Doe"
   bio                         = ""
-  avatar                      = "img/avatar.png"
+  avatar                      = "img/avatar.webp"
   job                         = "Software Engineer"
   gender                      = "male"
   email                       = "jhon-doe@gmail.com"
@@ -94,7 +94,7 @@ summaryLength                 = 10
 [Params]
   subTitle                    = "Personal site, Blog, and Portfolio"
   description                 = "Sebuah catatan dan blog pribadi saya. Saya juga akan membagi tentang pengalaman saya dan teknologi-teknolgi yang saya gunakan/pelajari atau yang sedang populer." # Site Description. Used in meta description
-  images                      = ["img/avatar.png"]
+  images                      = ["img/avatar.webp"]
   copyright                   = "Wisnuwiry" # Copyright holder, otherwise will use .Site.Title
   opengraph                   = true # Enable OpenGraph if true
   twitter_cards               = true # Enable Twitter Cards if true

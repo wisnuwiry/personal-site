@@ -67,11 +67,11 @@ summaryLength                 = 5
 [Author] # Used in authorbox
   name                        = "Your name"
   bio                         = "Your Bio personal"
-  avatar                      = "img/avatar.png" # your Avatar 
+  avatar                      = "img/avatar.webp" # your Avatar 
 
 [Params]
   description                 = "Default descriptiion your sute." # Site Description. Used in meta description
-  images                      = ["img/avatar.png"]
+  images                      = ["img/avatar.webp"]
   copyright                   = "Wisnuwiry" # Copyright holder, otherwise will use .Site.Title
   opengraph                   = true # Enable OpenGraph if true
   twitter_cards               = true # Enable Twitter Cards if true

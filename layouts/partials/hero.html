@@ -2,7 +2,7 @@
 	{{ partial "entry/featured.html" . }}
 	<header class="hero__content" {{ if .IsHome }} style="bottom: 10%" {{end}}>
 	<div class="wrapper">
-		<h1 itemprop="name">
+		<h1 itemprop="name" {{if .Params.images }} style="color: white;" {{ end}}>
 	{{ if .IsHome }}
 		{{ .Site.Params.Hero.title }}
 	{{ else }}
