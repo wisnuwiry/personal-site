@@ -23,19 +23,19 @@
 	{{- $style := slice $cssTheme $cssMain $cssCode | resources.Concat "css/bundle.css" | resources.Minify}}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{- range .Site.Params.customCSS }}
-	<link rel="stylesheet" href="{{ . | relURL }}">
+	<link rel="stylesheet" href="{{ . | absURL }}">
 	{{- end }}
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ "/icons/apple-touch-icon.png" | relURL }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ "/icons/favicon-32x32.png" | relURL }}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ "/icons/favicon-16x16.png" | relURL }}">
-	<link rel="shortcut icon" href="{{ "/icons/favicon.ico" | relURL }}" type="image/x-icon">
-	<link rel="icon" href="{{ "/icons/favicon.ico" | relURL }}" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ "/icons/apple-touch-icon.png" | absURL }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ "/icons/favicon-32x32.png" | absURL }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ "/icons/favicon-16x16.png" | absURL }}">
+	<link rel="shortcut icon" href="{{ "/icons/favicon.ico" | absURL }}" type="image/x-icon">
+	<link rel="icon" href="{{ "/icons/favicon.ico" | absURL }}" type="image/x-icon">
 	<meta name="msapplication-TileColor" content="{{ .Site.Params.Manifest.themeColor | default "#8dc153" }}">
 	{{- with .OutputFormats.Get "rss" }}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 	{{- with ((.Site.GetPage "home").OutputFormats.Get "manifest") }}
-	<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+	<link rel="manifest" href="{{ "manifest.json" | absURL }}">
 	{{- end }}
 	{{ if .Site.Params.googleSearchConsole }}
 	<meta name="google-site-verification" content="{{ .Site.Params.googleSearchConsole }}">
@@ -60,8 +60,6 @@
 	{{ with .Site.Params.adsenseId }}
 	<script data-ad-client="{{ . }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	{{ end }}
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 
 <body class="">

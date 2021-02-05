@@ -1,4 +1,4 @@
-const CACHE_VERSION = 9;
+const CACHE_VERSION = 10;
 
 const BASE_CACHE_FILES = [
     '/css/bundle.min.css',
@@ -6,7 +6,9 @@ const BASE_CACHE_FILES = [
     'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js',
     '/manifest.json',
     '/img/avatar.webp',
-    '/img/placeholder.svg'
+    '/img/placeholder.svg',
+    '/fonts/jost-v4-latin-700.woff2',
+    '/fonts/jost-v4-latin-regular.woff2'
 ];
 
 const NOT_FOUND_CACHE_FILES = [
