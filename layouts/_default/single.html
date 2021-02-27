@@ -14,7 +14,7 @@
 	</div>
 	{{ else }}
 	{{ partial "header_indicator.html" . }}
-	<div class="content">
+	<div class="content {{if .Params.toc | default .Site.Params.Entry.toc }} grid {{ end }}">
 		{{ partial "entry/toc.html" . }}
 		<div class="wrapper post__entry">
 			{{ partial "details.html" . }}

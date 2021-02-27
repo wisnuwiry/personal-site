@@ -989,7 +989,7 @@ textarea {
     width: 100%;
 }
 @media (min-width: 1024px){
-    .content {
+    .content.grid {
         display: grid;
         grid-template-columns: 20vw 75vw;
         width: 100%;
