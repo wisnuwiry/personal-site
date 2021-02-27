@@ -1,7 +1,7 @@
-{{- $toc := default .Site.Params.Entry.toc .Params.toc -}}
-{{- $tocOpen := default .Site.Params.Entry.tocOpen .Params.tocOpen -}}
+{{- $toc := .Params.toc | default .Site.Params.Entry.toc -}}
 
 {{- if $toc }}
+{{- if .Params.toc }}
 <aside class="tableOfContentContainer" id="tableOfContentContainer">
 	{{ .TableOfContents }}
 </aside>
@@ -10,4 +10,5 @@
         enableStickyToc();
     });
 </script>
+{{ end }}
 {{- end }}
