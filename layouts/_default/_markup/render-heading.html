@@ -1,5 +1,0 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}" itemprop="headline" class="heading">{{ .Text | safeHTML }}
-{{- if and (ge .Level 2) (le .Level 4) }}{{" " -}}
-<a class="anchor-link" href="#{{ .Anchor | safeURL }}">#</a>
-{{- end -}}
-</h{{ .Level }}>
