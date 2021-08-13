@@ -1,0 +1,33 @@
+[build]
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+writeStats = false
+NODE_VERSION = 12
+  command = "hugo"
+  publish = "public"
+
+[build.production]
+command = "hugo build"
+publish = "public"
+
+
+[deploy-preview]
+command = "hugo build:preview"
+
+# Hugo Netlify configuration
+[production.environment]
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[split1]
+command = "hugo --gc --minify --enableGitInfo"
+
+[split1.production]
+
+HUGO_ENV = "production"
+
+[branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[next.environment]
+HUGO_ENABLEGITINFO = "true"
