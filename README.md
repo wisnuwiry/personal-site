@@ -13,7 +13,7 @@ This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry
 
 Go to your forestry account and click on `import your site now`. declare your config.toml file [exampleSite] and fill up basic settings .
 
-**Or just click this button for one click installation** [![import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=wisnuwiry/blog-v2&engine=hugo&version=0.74.3&config=exampleSite)
+**Or just click this button for one click installation** [![import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=wisnuwiry/personal-site-demo2&engine=hugo&version=0.74.3&config=exampleSite)
 
 Now mark everything as done, then go to configuration to change the base url . You can put any url but this have to similar as netlify . So for now put a name which you are going to put in netlify as netlify subdomain.
 
@@ -123,7 +123,7 @@ summaryLength                 = 10
   endMessagePost              = "Wrong content? "
   
   # Link repo to edit content
-  editContentPageLink         = "https://github.com/wisnuwiry/blog-v2/edit/master/content/"
+  editContentPageLink         = "https://github.com/wisnuwiry/personal-site-demo/edit/master/content/"
   
   # Formspree form contact id, more info: https://cse.google.com/cse/all
   formspreeId                 = ""
