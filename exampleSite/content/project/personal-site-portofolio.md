@@ -9,243 +9,133 @@ images: [
 ]
 ---
 
-### Overview
+This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+<!--more-->
 
-**Wisnuwiry site** ini adalah sebuah **open source blogging  dan porotoflio platform** yang dibuat dengan Hugo (Static site generator).
+## Headings
 
-![Personal site Wisnuwiry](https://i.ibb.co/DbJ5J52/featured.png)
+The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-Berikut hasil analisis lighthouse performa dari hasil karya saya.
-![Hasil Analisis My Site Wisnuwiry](https://i.ibb.co/TM7pc2B/analisis-web-wisnuwiry.png)
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
 
-Untuk costumize pada file `config.toml` disitu bisa custom sesuka hati kalian.
+## Paragraph
 
-### Feature:
+Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
 
-- Fast Loading
-- Available PWA
-- Full Responsive
-- Lazy load image
-- Bisa Deploy langsung ke netlify
-- etc
+Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
-### Detail or Download 
-Anda bisa melihat hasil project saya dan jika ingin kontribusi, ataupun ingin membuat web seperti saya ini bisa check di github saya:
+## Blockquotes
 
-<center><a href="//github.com/wisnuwiry/blog-v2" class="btn">Show Detail</a></center>
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-Mungkin teman-teman ingin mencoba hasil karya ku ini, tapi tidak tahu gimana cara setup nya, dan dokumentasinya bagaimana?
+#### Blockquote without attribution
 
-Sekarang saya akan menjelaskan sedikit bagaimana cara menggunakanya.
+> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+> **Note** that you can use *Markdown syntax* within a blockquote.
 
+#### Blockquote with attribution
 
-### Basic Setup:
+> Don't communicate by sharing memory, share memory by communicating.<br>
+> — <cite>Rob Pike[^1]</cite>
 
-Pastikan teman-teman sudah menginstall hugo terlebih dahulu ya, bila ingin referensinya bisa lihat di [Membuat Blog dengan Hugo](/post/membuat-blog-dengan-hugo/) bagaimana cara install hugo dan menggunakanya.
+[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
-Pertama-tama untuk setup clone dulu repository saya:
+## Tables
 
-```bash
-git clone https://github.com/wisnuwiry/blog-v2.git
-cd blog-v2
-hugo server
+Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+
+   Name | Age
+--------|------
+    Bob | 27
+  Alice | 23
+
+#### Inline Markdown within tables
+
+| Italics   | Bold     | Code   |
+| --------  | -------- | ------ |
+| *italics* | **bold** | `code` |
+
+## Code Blocks
+
+#### Code block with backticks
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
 ```
 
-Dan ini bisa Anda langsung deploy ke netlify, dengan cara `Fork`  dulu repository saya, kemudian import di netlify.
+#### Code block indented with four spaces
 
-Wow, sudah jadi website secara lokal sudah bisa Anda jalankan, salamat....
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Example HTML5 Document</title>
+    </head>
+    <body>
+      <p>Test</p>
+    </body>
+    </html>
 
-### Basic Configuration
-Semua configurasi pada website ini pada file `confic.toml` berikut contoh confignya:
+#### Code block with Hugo's internal highlight shortcode
+{{< highlight html >}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
+{{< /highlight >}}
 
-```toml
-baseURL                       = "https://example.com/" # your domain site
-languageCode                  = "id" 
-title                         = "Your name site"
-summaryLength                 = 5
+## List Types
 
-[Author] # Used in authorbox
-  name                        = "Your name"
-  bio                         = "Your Bio personal"
-  avatar                      = "img/avatar.webp" # your Avatar 
+#### Ordered List
 
-[Params]
-  description                 = "Default descriptiion your sute." # Site Description. Used in meta description
-  images                      = ["img/avatar.webp"]
-  copyright                   = "Wisnuwiry" # Copyright holder, otherwise will use .Site.Title
-  opengraph                   = true # Enable OpenGraph if true
-  twitter_cards               = true # Enable Twitter Cards if true
-  mainSections                = ["post"] # Set main page sections
-  projectSections             = ["project"] # Set main page sections
-  dateFormat                  = "January 02, 2006" # Change the format of dates
-  # customCSS                 = ["css/custom.css"] # Include custom CSS files
-  customJS                    = []
-  mainMenuAlignment           = "right" # Align main menu (desktop version) to the right side
-  authorbox                   = true # Show authorbox at bottom of single pages if true
-  comments                    = true # Enable comments for all site pages
-  related                     = true # Enable Related content for single pages
-  relatedMax                  = 5
-  mathjax                     = false # Enable MathJax for all site pages
-  hideNoPostsWarning          = false # Don't show no posts empty state warning in main page, if true
-  fontUnit                    = "em"
-  largestFontSize             = 2.5
-  smallestFontSize            = 1
-  googleSearchConsole         = "" # Google search console code
-  GoogleAnalytics             = "" # Google analisi code
-  fb_admins                   = "" # Your facebook admin
-  fb_app_id                   = "" # Your facebook app id
+1. First item
+2. Second item
+3. Third item
 
+#### Unordered List
 
-[Params.Hero]
-  title                       = "A Personal Site By WisnuWiry"
-  desc                        = "Welcome to my Blog :)"
+* List item
+* Another item
+* And another item
 
-[Params.Entry]
-  meta                        = ["date", "categories"] # Enable meta fields in given order
-  toc                         = true # Enable Table of Contents
-  tocOpen                     = false # Open Table of Contents block. Optional
+#### Nested list
 
-[Params.Featured]
-  previewOnly                 = false # Show only preview featured image
+* Fruit
+  * Apple
+  * Orange
+  * Banana
+* Dairy
+  * Milk
+  * Cheese
 
-[Params.Breadcrumb]
-  enable                      = true # Enable breadcrumb block globally
-  homeText                    = "Home" # Home node text
+## Other Elements — abbr, sub, sup, kbd, mark
 
-[Params.Social]
-  twitter                     = "" #username your social media ex: wisnuwiry
-  telegram                    = ""
-  instagram                   = ""
-  linkedin                    = ""
-  github                      = ""
-  medium                      = ""
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
-[Params.Share] # Entry Share block
-  facebook                    = true
-  twitter                     = true
-  reddit                      = true
-  telegram                    = true
-  linkedin                    = true
-  pinterest                   = true
+H<sub>2</sub>O
 
-# Web App Manifest settings
-# https://www.w3.org/TR/appmanifest/
-# https://developers.google.com/web/fundamentals/web-app-manifest/
-[Params.Manifest]
-  name                        = "Wisnuwiry"
-  shortName                   = "Wisnuwiry"
-  display                     = "standalone"
-  startUrl                    = "/?utm_source=homescreen"
-  backgroundColor             = "#FFFFFF"
-  themeColor                  = "#0d2538"
-  description                 = "Personal Site By Wisnuwiry"
-  orientation                 = "portrait"
-  scope                       = "/"
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-[outputFormats]
-  [outputFormats.MANIFEST]
-    mediaType                 = "application/json"
-    baseName                  = "manifest"
-    isPlainText               = true
-    notAlternative            = true
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-[outputs]
-  home                        = ["HTML", "RSS", "MANIFEST"]
-
-enableRobotsTXT               = true
-
-# Pagination
-Paginate                      = 3
- 
-
-# Code
-[markup]
-  # defaultMarkdownHandler    = "blackfriday"
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList          = true
-      footnote                = true
-      linkify                 = true
-      strikethrough           = true
-      table                   = true
-      taskList                = true
-      typographer             = true
-    [markup.goldmark.parser]
-      attribute               = true
-      autoHeadingID           = true
-      autoHeadingIDType       = "github"
-    [markup.goldmark.renderer]
-      hardWraps               = false
-      unsafe                  = true
-      xhtml                   = false
-  [markup.blackFriday]
-    angledQuotes              = false
-    footnoteAnchorPrefix      = ""
-    footnoteReturnLinkContents= ""
-    fractions                 = true
-    hrefTargetBlank           = false
-    latexDashes               = true
-    nofollowLinks             = false
-    noreferrerLinks           = false
-    plainIDAnchors            = true
-    skipHTML                  = false
-    smartDashes               = true
-    smartypants               = true
-    smartypantsQuotesNBSP     = false
-    taskLists                 = true
-  [markup.highlight]
-    codeFences                = true
-    guessSyntax               = false
-    hl_Lines                  = ""
-    lineNoStart               = 1
-    lineNos                   = false
-    lineNumbersInTable        = false
-    noClasses                 = false
-    style                     = "dracula"
-    tabWidth                  = 4
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 2
-```
-
-Jadi teman-teman tidak perlu edit file langsung cuma custom config ini saja.
-
-### Membuat sebuah artikel baru
-
-Untuk semua content pada website ini tersedia pada folder `content/`.
-
-Anda harus mengetikkan command ini pada terminal ataupun cmd.
-
-```bash
-hugo new post/nama-artikel-yang-ingin-dibuat/index.md
-```
-
-Berikut contoh simple parameter untuk config tiap file:
-
-```toml
----
-title: "Your title Article"
-date: 2020-03-21T17:33:17+07:00
-draft: false
-tags: ["web", "hugo"]
----
-```
-
-dan ini untuk sebuah page/halaman:
-
-```toml
----
-title: "Your title page"
-menu: main
-toc: false
-authorBox: false
-breadcrumb: false
-comments: false
-share: false
-contact: true
-page: true
----
-```
-
-Sekian penjelasan dari saya, bila kurang jelas bisa comment dibawah, atau bisa langsung hubungi saya. Selamat mencoba.
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
