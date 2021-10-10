@@ -497,7 +497,7 @@ textarea {
 .navbar .navbar__menu li span[aria-haspopup="true"]:focus,
 .navbar .navbar__menu li span[aria-haspopup="true"]:hover {
     border-radius: 0.5rem;
-    background: #ffffff1f;
+    background: var(--background-color);
 }
 .navbar .navbar__toggle {
     background: var(--primary-color);
@@ -618,7 +618,7 @@ textarea {
 
 .navbar_mobile_overlay .navbar__menu li:hover {
     border-radius: 0.5rem;
-    background: #ffffff1f;
+    background: var(--background-color);
 }
 
 .navbar_mobile_overlay .navbar__menu li a[aria-haspopup="true"]::after,
@@ -1005,7 +1005,7 @@ textarea {
         padding: 2rem 0;
     }
     aside.tableOfContentContainer ul > li > ul {
-        margin-top: 0.8rem!important;
+        margin-top: 8px!important;
         margin-left: 0.8rem!important;
     }
     .content > aside.tableOfContentContainer ul {
@@ -1035,7 +1035,7 @@ textarea {
     #TableOfContents li a {
         color: var(--text-color);
         line-height: 1.2;
-        font-weight: 550;
+        font-weight: 530;
         padding: 0.5rem 0.5rem;
         font-size: 0.9rem;
         margin: 0 8px 8px 0;
@@ -1044,14 +1044,16 @@ textarea {
         border-radius: 8px;
     }
     #TableOfContents li a:hover{
-        background-color: hsla(0,0%,100%,.1);
+        background-color: var(--background-color);
     }
     #TableOfContents ul > li.active > a{
-        color: white;
-        background-color: var(--primary-color);
+        background-color: var(--background-color);
     }
     .property > p {
         width: 45%;
+    }
+    .navbar_mobile_overlay{
+        display: none;
     }
 }
 

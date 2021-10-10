@@ -6,8 +6,8 @@ This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry
 
 ## Instant Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/hugo-theme-demo)
-[![Deploy to Vercel](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/wisnuwiry/hugo-theme-demo)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/personal-site-demo)
+[![Deploy to Vercel](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/wisnuwiry/personal-site-demo)
 
 ## Content Management
 
@@ -47,12 +47,12 @@ Before starting, please be sure that you have [installed Hugo](https://gohugo.io
 Create new project hugo
 
 ```bash
-hugo new site name_site
+hugo new site site_name
 ```
 Go to folder themes
 
 ```bash
-cd name_site/themes
+cd site_name/themes
 ```
 
 In your Hugo site themes directory, run:
@@ -67,11 +67,9 @@ Or, if you don’t plan to make any significant changes, but want to track and u
 git submodule add git@github.com:wisnuwiry/personal-site.git
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `personal-site`:
+Copy files `exampleSite/content` paste to `site_name`
 
-```
-theme = "personal-site"
-```
+Next, open `config.toml` and copy paste example config below.
 
 ### Example Config
 
