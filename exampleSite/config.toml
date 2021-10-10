@@ -53,7 +53,6 @@ summaryLength                 = 10
   formspreeId                 = ""
   
 
-
 [Params.Hero]
   title                       = "A Personal Site By Jhon Doe"
   desc                        = "Welcome to my Blog :)"
@@ -152,18 +151,6 @@ enableRobotsTXT               = true
 # Pagination
 Paginate                      = 3
  
-[related]
-    threshold = 0 
-    includeNewer = true
-    toLower = false
-
-    [[related.indices]]
-        name = "categories"
-        weight = 100
-
-    [[related.indices]]
-        name = "date"
-        weight = 10
 
 # Code
 [markup]
@@ -211,6 +198,6 @@ Paginate                      = 3
     style                     = "dracula"
     tabWidth                  = 4
   [markup.tableOfContents]
-    endLevel                  = 6
+    endLevel                  = 3
     ordered                   = false
     startLevel                = 2
