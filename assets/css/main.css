@@ -596,7 +596,7 @@ textarea {
     width: 100%;
     z-index: 2;
     align-items: center;
-    text-align: center;
+    text-align: start;
 }
 .hero .hero__content{
     position: absolute;
