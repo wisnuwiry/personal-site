@@ -7,7 +7,7 @@
                 aria-label="Previous page" {{ if not $pag.HasPrev }} aria-hidden="true" {{ end }}>Previous</a>
         </li>
         {{ end }}
-        <li  class="pagination__item">
+        <li  class="pagination__item pagination__item__numbers">
             {{- $.Scratch.Set "__paginator.ellipsed" false }} {{- range $pag.Pagers }}
             {{- $right := sub .TotalPages .PageNumber }} {{- $showNumber := or (le .PageNumber 3) (eq $right 0) }}
             {{- $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2))) }}
