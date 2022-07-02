@@ -2,7 +2,11 @@
 title: "Example with ToC (Table Of Content)"
 date: 2020-10-29T10:22:10+07:00
 tags: ["concept","atomic","design"]
+images: [
+    "https://images.unsplash.com/photo-1644982653424-1bfed7f972a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1989&q=80"
+]
 toc: true
+featured: true
 ---
 
 ## How to configure enable toc?

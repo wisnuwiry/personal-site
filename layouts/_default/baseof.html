@@ -17,8 +17,9 @@
 	{{ template "_internal/schema.html" .}}
 	{{- $cssTheme := resources.Get "css/theme.css" }}
 	{{- $cssMain := resources.Get "css/main.css" }}
+	{{- $cssAdaptive := resources.Get "css/adaptive.css" }}
 	{{- $cssCode := resources.Get "css/code.css" }}
-	{{- $style := slice $cssTheme $cssMain $cssCode | resources.Concat "css/bundle.css" | resources.Minify}}
+	{{- $style := slice $cssTheme $cssMain $cssAdaptive $cssCode | resources.Concat "css/bundle.css" | resources.Minify}}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{- range .Site.Params.customCSS }}
 	<link rel="stylesheet" href="{{ . | absURL }}">
@@ -28,7 +29,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ "/icons/favicon-16x16.png" | absURL }}">
 	<link rel="shortcut icon" href="{{ "/icons/favicon.ico" | absURL }}" type="image/x-icon">
 	<link rel="icon" href="{{ "/icons/favicon.ico" | absURL }}" type="image/x-icon">
-	<meta name="msapplication-TileColor" content="{{ .Site.Params.Manifest.themeColor | default "#8dc153" }}">
+	<meta name="msapplication-TileColor" content="{{ .Site.Params.Manifest.themeColor | default "#1da1f2" }}">
 	{{- with .OutputFormats.Get "rss" }}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
@@ -55,6 +56,9 @@
 	<meta
 		content="aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot"
 		name="search engines">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	{{ with .Site.Params.adsenseId }}
 	<script data-ad-client="{{ . }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	{{ end }}

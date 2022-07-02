@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "hero" . }}
+{{ partial "entry/featured.html" . }}
 	{{ if .Params.page }}
 	<div class="wrapper post__entry">
 		<div class="single block">
@@ -13,33 +13,34 @@
 		</div>
 	</div>
 	{{ else }}
-	{{ partial "header_indicator.html" . }}
-	<div class="content {{if .Params.toc | default .Site.Params.Entry.toc }} grid {{ end }}">
-		{{ partial "entry/toc.html" . }}
-		<div class="wrapper post__entry">
-			{{ partial "details.html" . }}
-			{{ partial "breadcrumb.html" . }}
-			<div class="single block">
-				<article class="entry" id="article">
-					<div class="entry__content">
-					{{ .Content }}
-					{{ partial "edit_content.html" . }}
-					{{ partial "contact_form.html" . }}
-					{{ partial "search.html" . }}
-					</div>
-					{{ if or (.Param "share") (isset $.Params "tags") }}
-					<footer class="entry__footer">
-						{{ partial "entry/tags.html" . }}
-						{{ partial "entry/share.html" . }}
-						{{ partial "authorbox.html" . }}
-					</footer>
-					{{ end }}
-				</article>
-				<!-- {{ partial "next_prev.html" .}} -->
+	<article id="article" class="post__entry single grid wrapper big-wrapper">
+		<div class="main">
+		{{ partial "breadcrumb.html" . }}
+		<div class="entry__toc card">
+			{{ partial "entry/toc.html" . }}
+		</div>
+			<div>
+			<div class="entry__content">
+				{{ .Content }}
+				{{ partial "edit_content.html" . }}
+				{{ partial "contact_form.html" . }}
+				{{ partial "search.html" . }}
+			</div>
+			{{ if or (.Param "share") (isset $.Params "tags") }}
+			<div class="entry__footer">
+				{{ partial "entry/tags.html" . }}
+				{{ partial "entry/share.html" . }}
+				{{ partial "authorbox.html" . }}
+			</div>
+			{{ end }}
 			</div>
 		</div>
+
+		{{ partial "sidebar_content.html" . }}
+	</article>
+	<div class="wrapper">
+		{{ partial "related.html" . }}
+		{{ partial "comments.html" . }}
 	</div>
-	{{ partial "related.html" . }}
-	{{ partial "comments.html" . }}
 	{{ end }}
 {{ end }}

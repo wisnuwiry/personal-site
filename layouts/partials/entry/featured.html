@@ -1,8 +1,16 @@
-{{ if .Params.images }}
-{{ $title := .Params.title }}
-{{ range first 1 .Params.images }}
-<figure class="hero__image hero__image--overlay">
-	<img class="hero__image-img lazyload" data-src="{{ . }}" src="{{ "/img/placeholder.svg" | relURL }}" alt="{{ $title }}"/>
-</figure>
-{{ end }}
-{{ end }}
+<div class="wrapper big-wrapper featured__box featured__box__img">
+	{{ $title := .Params.title }}
+	{{ if .Params.images }}
+	{{ range first 1 .Params.images }}
+	<figure class="hero__image">
+		<img class="hero__image-img lazyload" data-src="{{ . }}" src="{{ "/img/placeholder.svg" | relURL }}" alt="{{ $title }}"/>
+	</figure>
+	{{ end }}
+	{{ end }}
+	<div class="hero__content">
+		<h1>{{ $title }}</h1>
+	</div>
+	{{ if not .Params.page }} 
+	{{ partial "details.html" . }}
+	{{ end }}
+</div>

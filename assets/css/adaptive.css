@@ -1,0 +1,116 @@
+@media screen and (min-width: 20rem) {
+    html {
+        font-size: calc(1.1rem + 0.1 * ((100vw - 20rem) / 50));
+    }
+}
+@media screen and (min-width: 70rem) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+@media all and (max-width: 19.9375em) {
+    .btn,
+    [type="button"],
+    [type="submit"],
+    button {
+        width: 100%;
+    }
+}
+@media all and (max-width: 37.4375em) {
+    .btn,
+    [type="button"],
+    [type="submit"],
+    button {
+        margin-bottom: 0.56667rem;
+    }
+}
+@media all and (min-width: 20em) {
+    .btn + .btn,
+    .btn + [type="button"],
+    .btn + [type="submit"],
+    .btn + button,
+    [type="button"] + .btn,
+    [type="button"] + [type="button"],
+    [type="button"] + [type="submit"],
+    [type="button"] + button,
+    [type="submit"] + .btn,
+    [type="submit"] + [type="button"],
+    [type="submit"] + [type="submit"],
+    [type="submit"] + button,
+    button + .btn,
+    button + [type="button"],
+    button + [type="submit"],
+    button + button {
+        margin-left: 0.56667rem;
+    }
+}
+@media all and (min-width: 56.25em) {
+    .search {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+}
+@media all and (min-width: 56.25em) {
+    .search__btn {
+        margin-left: 1rem;
+        padding-right: 0;
+    }
+}
+
+@media all and (max-width: 56.1875em) {
+    .navbar .navbar__menu {
+        display: none;
+    }
+}
+@media all and (min-width: 56.25em) {
+    .navbar .navbar__toggle {
+        display: none;
+    }
+}
+@media screen and (max-width: 650px) {
+    .feed__item {
+        padding: 1.5rem;
+    }
+}
+@media all and (min-width: 37.5em) {
+    .post__bio::before {
+        content: "";
+        border-top: 0.2rem solid var(--border-color);
+        height: 1px;
+        margin-right: 2rem;
+        width: 20%;
+    }
+}
+@media all and (min-width: 37.5em) {
+    .bio__avatar {
+        height: 4rem;
+        margin-right: 2rem;
+        width: 4rem;
+    }
+    .bio__info > p {
+        width: 80%;
+    }
+}
+@media (min-width: 1024px){
+    .navbar_mobile_overlay{
+        display: none;
+    }
+}
+@media (max-width: 1280px) {
+    .single.grid{
+        display: block;
+    }
+    .single.grid .sidebar__action{
+        display: block;
+    }
+    .single.grid .sidebar__action .sidebar_elements {
+        z-index: 200;
+        right: 50px;
+        bottom: 10vh;
+        position: fixed;
+    }
+    .sidebar_elements .sidebar__item a{
+        opacity: 0.5;
+    }
+}

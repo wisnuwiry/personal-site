@@ -1,12 +1,13 @@
 {{- $toc := .Params.toc | default .Site.Params.Entry.toc -}}
 
 {{- if $toc }}
-<aside class="tableOfContentContainer" id="tableOfContentContainer">
-	{{ .TableOfContents }}
-</aside>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        enableStickyToc();
-    });
-</script>
+<div id="toc__box" class="toc__box">
+    <div class="wrapper toc__list collapse">
+        <h3 class="toc__title" id="toc__toggle">
+            <span style="display: flex;">{{ partial "svg/list.svg" }}<span style="margin-left: 20px;">TABLE OF CONTENT</span></span>
+            <span class="toc__toggle">{{ partial "svg/expands.svg" }}</span>
+        </h3>
+        {{ .TableOfContents }}
+    </div>
+</div>
 {{- end }}

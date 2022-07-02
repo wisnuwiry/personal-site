@@ -23,7 +23,7 @@
 {{- end }}
 
 {{- if $breadcrumb }}
-<nav class="breadcrumb{{ if not (or $.Title $.Content) }} breadcrumb--separated{{ end }} block" aria-label="breadcrumb">
+<nav class="{{ if not (or $.Title $.Content) }} breadcrumb--separated{{ end }} block card" aria-label="breadcrumb">
 	<ol class="breadcrumb__list">
 		{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 	</ol>

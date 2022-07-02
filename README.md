@@ -161,12 +161,6 @@ url = "/snippet"
 weight = 2 
 
 [[menu.main]]
-identifier = "Project"
-pre = "🚧"
-url = "/project" 
-weight = 3 
-
-[[menu.main]]
 identifier = "About"
 pre = "😃"
 url = "/about" 

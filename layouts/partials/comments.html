@@ -1,7 +1,7 @@
 {{ if (.Param "comments")}}
-<section class="post__comments">
-	<div class="wrapper">
-		<h5>💬 Comment: </h5>
+<section class="post__comments" id="post__comments">
+	<div>
+		<h5 class="flex-text-icon">{{ partial "svg/message.svg" }} <span>Comment:</span> </h5>
 		<div id="comment"></div>
 		{{ template "_internal/disqus.html" . }}
 	</div>

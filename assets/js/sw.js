@@ -1,5 +1,3 @@
-const CACHE_VERSION = 11;
-
 const BASE_CACHE_FILES = [
     '/css/bundle.min.css',
     '/js/bundle.min.js',
@@ -7,8 +5,6 @@ const BASE_CACHE_FILES = [
     '/manifest.json',
     '/img/avatar.webp',
     '/img/placeholder.svg',
-    '/fonts/jost-v4-latin-700.woff2',
-    '/fonts/jost-v4-latin-regular.woff2'
 ];
 
 const NOT_FOUND_CACHE_FILES = [
@@ -29,10 +25,10 @@ const OFFLINE_PAGE = '/offline/index.html';
 const NOT_FOUND_PAGE = '/404.html';
 
 const CACHE_VERSIONS = {
-    assets: 'assets-v' + CACHE_VERSION,
-    content: 'content-v' + CACHE_VERSION,
-    offline: 'offline-v' + CACHE_VERSION,
-    notFound: '404-v' + CACHE_VERSION,
+    assets: 'assets-v' + BUILD_DATE,
+    content: 'content-v' + BUILD_DATE,
+    offline: 'offline-v' + BUILD_DATE,
+    notFound: '404-v' + BUILD_DATE,
 };
 
 // Define MAX_TTL's in SECONDS for specific file extensions
