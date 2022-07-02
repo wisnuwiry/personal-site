@@ -75,6 +75,10 @@ a:active {
 a:focus {
     outline: 0;
 }
+.entry__content {
+    padding-top: 2rem;
+    max-width: 42rem;
+}
 .entry__content a{
     color: var(--link-color);
     cursor: pointer;
