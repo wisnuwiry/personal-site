@@ -1,5 +1,5 @@
 <div class="hero">
-	<header class="hero__content" {{ if .IsHome }} style="bottom: 10%" {{end}}>
+	<header class="hero__content">
 	<div class="wrapper">
 		<h1 itemprop="name" {{if .Params.images }} style="color: white;" {{ end}}>
 	{{ if .IsHome }}
@@ -10,10 +10,6 @@
 		</h1>
 	{{ if .IsHome }}
 		<p>{{ .Site.Params.Hero.desc }}</p>
-		<div class="post__meta post__meta--author">
-			<img class="post__author-thumb lazyload" data-src="{{ .Site.Author.avatar | absURL}}" alt="{{ .Site.Author.name }}" src="/img/placeholder.svg"> 
-			<a href="/about" class="feed__author invert">{{ .Site.Author.name}}</a>
-		</div>
 	{{ end }}
 		</div>
 	</header>
