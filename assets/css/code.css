@@ -1,4 +1,4 @@
-body{
+body {
     /* --code-color: #7f7f7f;
     --code-bg-color: #f0f3f3;
     --code-hl: #ffc;
@@ -111,7 +111,7 @@ body{
 }
 
 /* body.dark-theme { */
-    /* --code-color: #f8f8f2;
+/* --code-color: #f8f8f2;
     --code-bg-color: #0e2233;
     --code-hl: #000;
     --code-lnt: #7f7f7f;
@@ -169,10 +169,10 @@ body{
 
 code {
     font-size: 0.87891rem;
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 }
 
-:not(pre)>code{
+:not(pre)>code {
     color: var(--inline-code-text);
     padding: .2rem .33rem;
     vertical-align: 1%;
@@ -183,29 +183,35 @@ code {
 .chroma {
     overflow-x: auto;
 }
-.chroma .lntd:nth-child(1){
+
+.chroma .lntd:nth-child(1) {
     width: 2rem;
     border-right: .15rem solid #17354c;
 }
-.chroma .lntd:nth-child(2) > pre {
+
+.chroma .lntd:nth-child(2)>pre {
     padding-left: 1rem;
 }
-.highlight{
+
+.highlight {
     color: var(--code-color);
     background-color: var(--code-bg-color);
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
-pre.chroma{
+
+pre.chroma {
     padding: 0;
     line-height: 1.5;
 }
+
 .chroma .lntd {
     vertical-align: top;
     padding: 0;
     margin: 0;
     border: 0;
 }
+
 .chroma .lntable {
     border-spacing: 0;
     padding: 0;
@@ -213,190 +219,248 @@ pre.chroma{
     border: 0;
     overflow: auto;
 }
+
 .chroma .hl {
     display: block;
     width: 100%;
     background-color: var(--code-hl);
 }
+
 .chroma .l {
     color: var(--code-color);
 }
+
 .chroma .lnt {
     margin-right: 0.4em;
     padding: 0 0.4em 0 0.4em;
     color: var(--code-lnt);
 }
+
 .chroma .ln {
     margin-right: 0.4em;
     padding: 0 0.4em 0 0.4em;
     color: var(--code-ln);
 }
+
 .chroma .k {
     color: var(--code-k);
 }
+
 .chroma .kc {
     color: var(--code-kc);
 }
+
 .chroma .kd {
     color: var(--code-kd);
     font-style: italic;
 }
+
 .chroma .kn {
     color: var(--code-kn);
 }
+
 .chroma .kp {
     color: var(--code-kp);
 }
+
 .chroma .kr {
     color: var(--code-kr);
 }
+
 .chroma .kt {
     color: var(--code-kt);
 }
+
 .chroma .na {
     color: var(--code-na);
 }
+
 .chroma .nb {
     color: var(--code-nb);
     font-style: italic;
 }
+
 .chroma .nc {
     color: var(--code-nc);
 }
+
 .chroma .nf {
     color: var(--code-nf);
 }
+
 .chroma .nl {
     color: var(--code-nl);
     font-style: italic;
 }
+
 .chroma .nt {
     color: var(--code-nt);
 }
+
 .chroma .nv {
     color: var(--code-nv);
     font-style: italic;
 }
+
 .chroma .vc {
     color: var(--code-vc);
     font-style: italic;
 }
+
 .chroma .vg {
     color: var(--code-vg);
     font-style: italic;
 }
+
 .chroma .vi {
     color: var(--code-vi);
     font-style: italic;
 }
+
 .chroma .s {
     color: var(--code-s);
 }
+
 .chroma .sa {
     color: var(--code-sa);
 }
+
 .chroma .sb {
     color: var(--code-sb);
 }
+
 .chroma .sc {
     color: var(--code-sc);
 }
+
 .chroma .dl {
     color: var(--code-dl);
 }
+
 .chroma .sd {
     color: var(--code-sd);
 }
+
 .chroma .s2 {
     color: var(--code-s2);
 }
+
 .chroma .se {
     color: var(--code-se);
 }
+
 .chroma .sh {
     color: var(--code-sh);
 }
+
 .chroma .si {
     color: var(--code-si);
 }
+
 .chroma .sx {
     color: var(--code-sx);
 }
+
 .chroma .sr {
     color: var(--code-sr);
 }
+
 .chroma .s1 {
     color: var(--code-s1);
 }
+
 .chroma .ss {
     color: var(--code-ss);
 }
+
 .chroma .m {
     color: var(--code-m);
 }
+
 .chroma .mb {
     color: var(--code-mb);
 }
+
 .chroma .mf {
     color: var(--code-mf);
 }
+
 .chroma .mh {
     color: var(--code-mh);
 }
+
 .chroma .mi {
     color: var(--code-mi);
 }
+
 .chroma .il {
     color: var(--code-il);
 }
+
 .chroma .mo {
     color: var(--code-mo);
 }
+
 .chroma .o {
     color: var(--code-o);
 }
+
 .chroma .ow {
     color: var(--code-ow);
 }
+
 .chroma .c {
     color: var(--code-c);
 }
+
 .chroma .ch {
     color: var(--code-ch);
 }
+
 .chroma .cm {
     color: var(--code-cm);
 }
+
 .chroma .c1 {
     color: var(--code-c1);
 }
+
 .chroma .cs {
     color: var(--code-cs);
 }
+
 .chroma .cp {
     color: var(--code-cp);
 }
+
 .chroma .cpf {
     color: var(--code-cpf);
 }
+
 .chroma .gd {
     color: var(--code-gd);
 }
+
 .chroma .ge {
     text-decoration: underline;
 }
+
 .chroma .gh {
     font-weight: 700;
 }
+
 .chroma .gi {
     font-weight: 700;
 }
+
 .chroma .go {
     color: var(--code-go);
 }
+
 .chroma .gu {
     font-weight: 700;
 }
+
 .chroma .gl {
     text-decoration: underline;
 }

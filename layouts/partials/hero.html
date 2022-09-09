@@ -1,7 +1,7 @@
 <div class="hero">
 	<header class="hero__content">
 	<div class="wrapper">
-		<h1 itemprop="name" {{if .Params.images }} style="color: white;" {{ end}}>
+		<h1 itemprop="name" {{ if .IsHome }} style="text-align: left;" {{ end }}>
 	{{ if .IsHome }}
 		{{ .Site.Params.Hero.title }}
 	{{ else }}
@@ -9,7 +9,7 @@
 	{{ end }}
 		</h1>
 	{{ if .IsHome }}
-		<p>{{ .Site.Params.Hero.desc }}</p>
+		<p {{ if .IsHome }} style="text-align: left;" {{ end }}>{{ .Site.Params.Hero.desc }}</p>
 	{{ end }}
 		</div>
 	</header>
