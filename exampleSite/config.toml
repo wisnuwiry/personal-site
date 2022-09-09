@@ -1,0 +1,160 @@
+baseURL = "https://jhondoe.space/"
+languageCode = "id"
+summaryLength = 10
+theme = "personal-site"
+themesdir = "../.."
+title = "jhondoe"
+
+[Author]
+avatar = "img/avatar.webp"
+bio = "Flutter | Mobile Tech Enthusiast | Software Engineer | Blogger. Penggemar Teknologi di bidang Computer Science."
+donate = true
+email = "jhondoe@gmail.com"
+gender = "male"
+job = "Software Engineer"
+name = "John Doe"
+
+[Params]
+GoogleAnalytics = ""
+authorbox = true
+comments = true
+copyright = "jhondoe"
+customJS = []
+customSearchId = ""
+dateFormat = "January 02, 2006"
+description = "Sebuah catatan dan blog pribadi saya. Saya juga akan membagi tentang pengalaman saya dan teknologi-teknolgi yang saya gunakan/pelajari atau yang sedang populer."
+editContentPageLink = "https://github.com/jhondoe/blog-v2/edit/master/content/"
+endMessagePost = "Terdapat kesalahan penulisan, typo, ataupun juga kurang sesuai dalam penulisan, bantu Saya"
+fb_admins = ""
+fb_app_id = ""
+fontUnit = "em"
+formspreeId = ""
+googleSearchConsole = ""
+hideNoPostsWarning = false
+images = ["img/avatar.webp"]
+largestFontSize = 2.5
+mainMenuAlignment = "right"
+mainSections = ["post", "snippet"]
+mathjax = false
+opengraph = true
+paginateLength = 5
+projectSections = ["project"]
+related = true
+relatedMax = 5
+smallestFontSize = 1
+subTitle = "Personal site, Blog, and Portfolio"
+twitter_cards = true
+
+[Params.Breadcrumb]
+enable = true
+homeText = "Home"
+
+[Params.Comments]
+repository = "jhondoe/blog-v2"
+
+[Params.Entry]
+meta = ["date", "categories"]
+toc = true
+tocOpen = false
+
+[Params.Featured]
+previewOnly = false
+
+[Params.Hero]
+title = "Hello, I'm John Doe"
+desc = "Seorang ~Software Engineer~ yang suka dengan berbagi."
+
+[Params.Manifest]
+backgroundColor = "#8dc153"
+description = "Personal Site By Jhondoe"
+display = "standalone"
+name = "Jhondoe Blog"
+orientation = "portrait"
+scope = "/"
+shortName = "Jhondoe"
+startUrl = "/?utm_source=homescreen"
+themeColor = "#1da1f2"
+
+[Params.Share]
+facebook = true
+linkedin = true
+pinterest = true
+reddit = true
+telegram = true
+twitter = true
+
+[Params.Social]
+github = "jhondoe"
+gitlab = "jhondoe"
+linkedin = "wisnu-saputra"
+medium = "jhondoe"
+telegram = "jhondoe"
+twitter = "jhondoe"
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+style = "dracula"
+tabWidth = 4
+
+[markup.tableOfContents]
+endLevel = 3
+ordered = false
+startLevel = 2
+
+[[menu.main]]
+identifier = "Contact"
+pre = "🤙"
+url = "/contact"
+weight = 6
+[[menu.main]]
+identifier = "About"
+pre = "😃"
+url = "/about"
+weight = 5
+[[menu.main]]
+identifier = "Snippet"
+pre = "⚒️"
+url = "/snippet"
+weight = 3
+[[menu.main]]
+identifier = "Post"
+pre = "📝"
+url = "/post"
+weight = 2
+
+[outputFormats.MANIFEST]
+baseName = "manifest"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[outputs]
+Paginate = 5
+enableRobotsTXT = true
+home = ["HTML", "RSS", "MANIFEST"]
+
+[related]
+includeNewer = true
+threshold = 0
+toLower = false
+[[related.indices]]
+name = "categories"
+weight = 100
+[[related.indices]]
+name = "date"
+weight = 10
+[sitemap]
+changeFreqPage = "monthly"
+changefreq = "daily"
+filename = "sitemap.xml"
+priority = 1
+priorityPage = 0.5
+[taxonomies]
+category = "categories"
+series = "series"
+tags = "tags"
