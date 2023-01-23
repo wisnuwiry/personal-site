@@ -9,3 +9,5 @@ share: false
 search: true
 page: true
 ---
+
+Test example of content hahah

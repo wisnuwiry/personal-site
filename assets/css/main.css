@@ -66,7 +66,7 @@ html {
 
 body {
     background: var(--background-color);
-    color: var(--text-color);
+    color: var(--regular-text-color);
     font-weight: 400;
     line-height: 1.7;
     -ms-scroll-chaining: none;
@@ -825,7 +825,9 @@ textarea {
     border: 1px solid var(--border-color);
 }
 
-.feed__item .post__tag a {
+.feed__item .post__tag a,
+.series__item .post__tag a
+ {
     background: var(--background-color);
 }
 
@@ -1268,4 +1270,33 @@ textarea {
     display: block;
     width: 1.25rem;
     margin-top: 0.2rem;
+}
+
+.grid-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: max-content;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+.series__item img {
+    width: 100%;
+    min-height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.series__item .series__item_body {
+    padding: 1.5rem;
+}
+
+.series__item_body h2 {
+    margin-top: 0!important;
+    font-size: 1.3333333em;
+    line-height: 1.5;
+}
+
+.series__item_body p {
+    margin-top: 0.5rem;
+    color: var(--regular-text-color);
 }

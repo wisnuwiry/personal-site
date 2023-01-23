@@ -126,6 +126,11 @@ identifier = "Post"
 pre = "📝"
 url = "/post"
 weight = 2
+[[menu.main]]
+identifier = "Series"
+pre = "🗂️"
+url = "/series"
+weight = 1
 
 [outputFormats.MANIFEST]
 baseName = "manifest"
@@ -154,7 +159,3 @@ changefreq = "daily"
 filename = "sitemap.xml"
 priority = 1
 priorityPage = 0.5
-[taxonomies]
-category = "categories"
-series = "series"
-tags = "tags"

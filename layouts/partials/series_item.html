@@ -1,0 +1,10 @@
+<article class="series__item card">
+    <a href="{{ .RelPermalink }}">
+        <img class="lazyload" src="{{ .Params.image }}">
+        <div class="series__item_body">
+            <h2 class=".h3">{{ .Title }}</h2>
+            <p>{{ .Params.description }}</p>
+            {{ partial "entry/tags.html" . }}
+        </div>
+    </a>
+</article>

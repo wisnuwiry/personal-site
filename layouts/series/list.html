@@ -1,0 +1,13 @@
+{{ define "main" }}
+	{{ partial "hero" . }}
+    <div class="wrapper big-wrapper post__entry">
+        {{ .Content }}
+        <br>
+        <br>
+        <!-- List -->
+        {{ partial "list_series.html" . }}
+        
+        <!-- Pagination -->
+        {{ partial "pagination.html" . }}
+    </div>	
+{{ end }}
