@@ -1252,3 +1252,20 @@ textarea {
 .contact__form textarea {
     margin: 8px 0;
 }
+
+.file-name {
+    position: relative;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    bottom: calc(-2rem + -0.7vw);
+    font-size: 0.8rem;
+    color: var(--code-c1)!important;
+}
+
+.file-name .file-icon {
+    margin-right: 0.5rem;
+    display: block;
+    width: 1.25rem;
+    margin-top: 0.2rem;
+}

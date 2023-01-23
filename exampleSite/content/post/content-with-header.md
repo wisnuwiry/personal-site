@@ -14,6 +14,7 @@ You must add `images` field array and paste image url in array.
 
 Complete example:
 
+{{< file "yaml" "example.yaml" >}}
 ```yaml
 title: "Content with ToC (Table Of Content)"
 date: 2020-10-29T10:22:10+07:00
@@ -24,10 +25,26 @@ tags: ["concept","atomic","design"]
 toc: true
 ```
 
+{{< file "dart" "example.dart" >}}
+```dart
+void main() {
+    // Test comment code
+}
+```
+
 # Header 1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus elementum sagittis vitae et leo. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Urna id volutpat lacus laoreet. Rhoncus mattis rhoncus urna neque viverra. Sed pulvinar proin gravida hendrerit lectus. Fermentum dui faucibus in ornare quam viverra orci sagittis. Tincidunt eget nullam non nisi est. Varius morbi enim nunc faucibus a pellentesque. Egestas sed sed risus pretium quam vulputate dignissim suspendisse.
 
+```yaml
+title: "Content with ToC (Table Of Content)"
+date: 2020-10-29T10:22:10+07:00
+images: [
+    https://miro.medium.com/max/1000/1*V5oi-JrH4RlEQuYdVrQXig.png,
+]
+tags: ["concept","atomic","design"]
+toc: true
+```
 ## Header 2
 
 Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Vivamus at augue eget arcu dictum varius duis. Massa vitae tortor condimentum lacinia quis vel eros donec. Turpis massa sed elementum tempus. Amet venenatis urna cursus eget nunc scelerisque viverra mauris in. Id faucibus nisl tincidunt eget nullam non. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Dignissim enim sit amet venenatis urna. Magna eget est lorem ipsum dolor sit amet consectetur. Amet consectetur adipiscing elit duis. Amet nulla facilisi morbi tempus iaculis. Diam vel quam elementum pulvinar etiam non. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Cras tincidunt lobortis feugiat vivamus at. Leo integer malesuada nunc vel risus commodo viverra.

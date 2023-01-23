@@ -193,10 +193,10 @@ code {
     padding-left: 1rem;
 }
 
-.highlight {
+.highlight, .file-name {
     color: var(--code-color);
     background-color: var(--code-bg-color);
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     padding: 0.5rem;
 }
 
