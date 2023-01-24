@@ -1,0 +1,9 @@
+{{ if isset .Params "chapter_start" }}
+    <h3>{{ .Params.chapter_start }}</h3>
+{{ end }}
+<a href="{{ .Permalink }}">
+    <div class="chapter__item card">
+        <div class="icon">{{ partial "svg/uncomplete.svg" }}</div>
+        {{ .Params.title }}
+    </div>
+</a>

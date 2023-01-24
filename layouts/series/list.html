@@ -1,13 +1,28 @@
 {{ define "main" }}
-	{{ partial "hero" . }}
+    {{ if eq .Params.index true }}
+    {{ partial "entry/featured.html" . }}
+    {{ else }}
+    {{ partial "hero" . }}
+    {{ end }}
+	
+    <!-- Load Main Overview Series -->
+    {{ if eq .Params.index true }}
+        <div class="wrapper post__entry">
+            {{ partial "series/tech_stack.html" . }}
+            {{ .Content }}
+            <br>
+            {{ partial "series/chapters.html" . }}
+        </div>
+    {{ else }}
     <div class="wrapper big-wrapper post__entry">
+        <br>
         {{ .Content }}
         <br>
-        <br>
         <!-- List -->
-        {{ partial "list_series.html" . }}
+        {{ partial "series/list_series.html" . }}
         
         <!-- Pagination -->
         {{ partial "pagination.html" . }}
-    </div>	
+    </div>
+    {{ end }}
 {{ end }}

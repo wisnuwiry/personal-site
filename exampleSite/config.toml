@@ -38,7 +38,6 @@ mainSections = ["post", "snippet"]
 mathjax = false
 opengraph = true
 paginateLength = 5
-projectSections = ["project"]
 related = true
 relatedMax = 5
 smallestFontSize = 1
@@ -53,12 +52,8 @@ homeText = "Home"
 repository = "jhondoe/blog-v2"
 
 [Params.Entry]
-meta = ["date", "categories"]
+meta = ["date"]
 toc = true
-tocOpen = false
-
-[Params.Featured]
-previewOnly = false
 
 [Params.Hero]
 title = "Hello, I'm John Doe"
@@ -143,16 +138,6 @@ Paginate = 5
 enableRobotsTXT = true
 home = ["HTML", "RSS", "MANIFEST"]
 
-[related]
-includeNewer = true
-threshold = 0
-toLower = false
-[[related.indices]]
-name = "categories"
-weight = 100
-[[related.indices]]
-name = "date"
-weight = 10
 [sitemap]
 changeFreqPage = "monthly"
 changefreq = "daily"

@@ -144,15 +144,15 @@
 }
 
 @media (max-width: 1280px) {
-    .single.grid {
+    .single .grid {
         display: block;
     }
 
-    .single.grid .sidebar__action {
+    .single .grid .sidebar__action {
         display: block;
     }
 
-    .single.grid .sidebar__action .sidebar_elements {
+    .single .grid .sidebar__action .sidebar_elements {
         z-index: 200;
         right: 50px;
         bottom: 10vh;
@@ -168,5 +168,11 @@
 @media (max-width: 720px) {
     .grid-list {
         grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+}
+
+@media (max-width: 1300px) {
+    .sidebar_chapter {
+        display: none;
     }
 }

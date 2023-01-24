@@ -13,31 +13,33 @@
 		</div>
 	</div>
 	{{ else }}
-	<article id="article" class="post__entry single grid wrapper big-wrapper">
-		<div class="main">
+	<div class="post__entry single wrapper big-wrapper">
 		{{ partial "breadcrumb.html" . }}
 		<div class="entry__toc card">
 			{{ partial "entry/toc.html" . }}
 		</div>
-			<div>
-			<div class="entry__content">
-				{{ .Content }}
-				{{ partial "edit_content.html" . }}
-				{{ partial "contact_form.html" . }}
-				{{ partial "search.html" . }}
+		<article id="article" class="grid">
+			<div class="main">
+				<div>
+				<div class="entry__content">
+					{{ .Content }}
+					{{ partial "edit_content.html" . }}
+					{{ partial "contact_form.html" . }}
+					{{ partial "search.html" . }}
+					{{ if (isset $.Params "tags") }}
+					{{ partial "entry/tags.html" . }}
+					{{ end }}
+				</div>
+				</div>
 			</div>
-			{{ if or (.Param "share") (isset $.Params "tags") }}
-			<div class="entry__footer">
-				{{ partial "entry/tags.html" . }}
-				{{ partial "entry/share.html" . }}
-				{{ partial "authorbox.html" . }}
-			</div>
-			{{ end }}
-			</div>
-		</div>
-
-		{{ partial "sidebar_content.html" . }}
-	</article>
+			{{ partial "sidebar_content.html" . }}
+		</article>
+		{{ if (.Param "share") }}
+		{{ partial "entry/share.html" . }}
+		{{ end }}
+		{{ partial "authorbox.html" . }}
+	</div>
+	
 	<div class="wrapper">
 		{{ partial "related.html" . }}
 		{{ partial "comments.html" . }}

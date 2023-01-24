@@ -11,6 +11,8 @@
 		<h1>{{ $title }}</h1>
 	</div>
 	{{ if not .Params.page }} 
+	{{ if not .Params.index }}
 	{{ partial "details.html" . }}
+	{{ end }}
 	{{ end }}
 </div>

@@ -1,0 +1,12 @@
+<div class="series__nav post__nav post__tag">
+    <div class="post__nav-prev">
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="invert post__nav-link" rel="prev" title="Previous">Previous</a>
+        {{ end }}
+    </div>
+    <div class="post__nav-next">
+        {{ with .PrevInSection }}
+            <a href="{{ .RelPermalink }}" class="invert post__nav-link" rel="next" title="Next">Next</a>
+        {{ end }}
+    </div>
+</div>

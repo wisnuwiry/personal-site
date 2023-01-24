@@ -1,13 +1,8 @@
 ---
 title: Supabase Full Course2
-toc: false
-authorBox: false
-breadcrumb: false
-comments: false
-share: false
 description: "Build and Deploy a full stak app, production ready web app wtih Supabase, react and PostgreSQL"
-tags: ["supabse", "react", "js"]
-page: true
+stack: ["dart", "react"]
+index: true
 image: https://fireship.io/courses/supabase/img/featured.webp
 ---
 

@@ -1,0 +1,8 @@
+<div>
+    <h2 class="center">CHAPTERS</h2>
+    <div class="chapter">
+        {{ range .Pages.ByWeight }}
+        {{ partial "series/chapter_item.html" . }}
+        {{ end }}
+    </div>
+</div>

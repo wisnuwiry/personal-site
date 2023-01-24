@@ -12,6 +12,7 @@
     --inline-code-bg: rgba(212, 53, 159, 0.1);
     --header-bg: #ffffff;
     --header-height: 3.4rem;
+    --primary-transparent: #1da0f251;
 }
 
 body.dark-theme {

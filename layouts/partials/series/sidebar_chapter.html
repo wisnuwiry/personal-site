@@ -1,0 +1,10 @@
+<div class="sidebar_chapter">
+    <h3>CHAPTERS</h3>
+    <div class="chapter">
+        <div class="pr-1">
+        {{ range .Parent.Pages.ByWeight }}
+        {{ partial "series/chapter_item.html" . }}
+        {{ end }}
+        </div>
+    </div>
+</div>

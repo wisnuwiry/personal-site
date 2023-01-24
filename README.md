@@ -4,10 +4,16 @@
 
 This is web made by Hugo static site generator, [Live Preview](https://wisnuwiry.space), more reference to example use this theme please check [my blog repo](https://github.com/wisnuwiry/blog-v2)
 
+## TODO:
+
+- [] Integrate series in home
+- [] Responsive chapter detail
+- [] Update readme
+- [] Setup demo repo
+
 ## Instant Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wisnuwiry/personal-site-demo)
-[![Deploy to Vercel](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/wisnuwiry/personal-site-demo)
 
 ## Content Management
 
@@ -135,7 +141,7 @@ summaryLength                 = 10
   desc                        = "Welcome to my Blog :)"
 
 [Params.Entry]
-  meta                        = ["date", "categories"] # Enable meta fields in given order
+  meta                        = ["date"] # Enable meta fields in given order
   toc                         = true # Enable Table of Contents
   tocOpen                     = false # Open Table of Contents block. Optional
 

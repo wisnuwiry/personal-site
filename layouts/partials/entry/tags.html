@@ -5,7 +5,7 @@
 		{{- $url := urls.Parse (. | urlize) -}}
 		{{- $path := $url.Path -}}
 		{{- with $.Site.GetPage (printf "/%s/%s" $taxo $path) }}
-			<a href="{{ .RelPermalink }}"># {{ .Title }}</a>
+			<a href="{{ .RelPermalink }}">#{{ .Title }}</a>
 		{{- end }}
 	{{- end }}
 </div>

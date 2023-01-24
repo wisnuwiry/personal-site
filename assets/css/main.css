@@ -16,7 +16,7 @@ section {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: Raleway, sans-serif, Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 }
 
 *:focus {
@@ -924,7 +924,7 @@ textarea {
 
 .related__item h3 {
     margin-top: 0.3rem;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.5em;
 }
 
 .post+.post__comments .h5 {
@@ -971,6 +971,11 @@ textarea {
     background-color: var(--card-color);
 }
 
+.card:hover {
+    box-shadow: transparent 0 0,transparent 0 0,rgba(0,0,0,.05)0 10px 15px -3px,rgba(0,0,0,2%)0 4px 6px -2px;
+    transition: all 0.3s;
+}
+
 .breadcrumb__list {
     display: flex;
     list-style: none;
@@ -999,6 +1004,7 @@ textarea {
     list-style: none;
 }
 
+.series__nav a,
 .pagination__item>a {
     padding: 1.3em;
     background: var(--card-color);
@@ -1157,15 +1163,20 @@ textarea {
     max-width: 42rem;
 }
 
-.single.grid {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+.single .grid {
+    display: grid;
     min-height: 555px;
+    grid-template-areas: "main floating";
+    grid-template-columns: minmax(0,2.5fr) minmax(0,0.5rem) ;
 }
 
-.single.grid .main {
-    flex: 1;
+.content_series .grid {
+    grid-template-areas: "sidebar main floating";
+    grid-template-columns: minmax(0,0.8fr) minmax(0,2.5fr) minmax(0,0.5rem);
+}
+
+.single .grid .main {
+    grid-area: main;
 }
 
 .main__content__sidebar {
@@ -1177,8 +1188,9 @@ textarea {
     transition: all 2s ease-out;
 }
 
-.single.grid .sidebar__action {
-    flex: 0 0 10em;
+.single .grid .sidebar__action {
+    grid-area: floating;
+    min-width: 4rem;
 }
 
 .sidebar_elements {
@@ -1299,4 +1311,143 @@ textarea {
 .series__item_body p {
     margin-top: 0.5rem;
     color: var(--regular-text-color);
+}
+
+.center {
+    text-align: center;
+}
+
+.tech__stack {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.tech__stack .tech__stack_item {
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.2rem;
+}
+
+.chapter {
+    margin: 1rem 0;
+}
+
+.chapter h3 {
+    text-transform: uppercase;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid var(--border-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.chapter__item {
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    display: inline-block;
+    width: 100%;
+    margin: 0.4rem 0;
+}
+
+.chapter__item > .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    border-radius: 2rem;
+    width: 40px;
+    height: 40px;
+}
+
+.chapter__item:hover > .icon,
+.chapter__item > .icon:hover {
+    background-color: var(--primary-transparent);
+}
+
+.chapter__item:hover > .icon svg,
+.chapter__item > .icon:hover svg{
+    fill: var(--primary-color);
+}
+
+.chapter__item svg {
+    fill: var(--disabled-text-color);
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.single.content_series {
+    max-width: 70rem!important;
+}
+
+.content_series .sidebar_chapter {
+    grid-area: sidebar;
+    margin-top: 5rem;
+}
+
+.sidebar_chapter .chapter {
+    max-width: 15em;
+    position: sticky;
+    top: 4em;
+    max-height: calc(100vh - 2em);
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+
+.sidebar_chapter .chapter h3 {
+    font-size: 1rem;
+}
+
+.sidebar_chapter .chapter .chapter__item {
+    margin-top: 0.1rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.sidebar_chapter .chapter .chapter__item .icon {
+    margin-right: 0.3rem;
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar_chapter .chapter .chapter__item svg {
+    width: 16px;
+    height: 16px;
+    margin: 7px;
+}
+
+.series__nav {
+    display: flex;
+}
+
+.series__nav .post__nav-prev,
+.series__nav .post__nav-next {
+    width: 50%;
+    margin: 0.3rem;
+    display: flex;
+}
+
+.series__nav .post__nav-prev a,
+.series__nav .post__nav-next a{
+    width: 100%;
+    font-weight: bold;
+}
+
+.series__nav .post__nav-prev a:hover,
+.series__nav .post__nav-next a:hover {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+}
+
+.post__nav-prev a {
+    text-align: start;
+}
+
+.post__nav-next a {
+    text-align: end;
+}
+
+.pr-1 {
+    padding-right: 1rem;
 }

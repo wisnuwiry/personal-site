@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ partial "entry/featured.html" . }}
+	<div class="post__entry single wrapper big-wrapper content_series">
+		<article id="article" class="grid">
+            {{ partial "sidebar_content.html" . }}
+			<div class="main">
+				<div style="max-width: 42rem;">
+                    {{ partial "breadcrumb.html" . }}
+                    <div class="entry__toc card">
+                        {{ partial "entry/toc.html" . }}
+                    </div>
+				<div class="entry__content">
+					{{ .Content }}
+					{{ partial "edit_content.html" . }}
+					{{ if (isset $.Params "tags") }}
+					{{ partial "entry/tags.html" . }}
+					{{ end }}
+					{{ partial "series/next_prev.html" . }}
+				</div>
+				</div>
+			</div>
+            {{ partial "series/sidebar_chapter.html" . }}
+		</article>
+	</div>
+	
+	<div class="wrapper">
+        {{ if (.Param "share") }}
+		{{ partial "entry/share.html" . }}
+		{{ end }}
+		{{ partial "authorbox.html" . }}
+		{{ partial "comments.html" . }}
+	</div>
+{{ end }}

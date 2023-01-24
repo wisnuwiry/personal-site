@@ -1,0 +1,12 @@
+{{ with .Params.stack }}
+    <hr>
+    <h2 class="center">TECH STACK</h2>
+    <div class="tech__stack center flex">
+    {{ range . }}
+        {{ $icon := (print "svg/files/" (.) ".svg") }}
+
+        <div class="tech__stack_item card">{{ partial $icon }}</div>
+    {{ end }}
+    </div>
+    <hr>
+{{ end }}
