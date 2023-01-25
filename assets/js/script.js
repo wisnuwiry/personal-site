@@ -84,6 +84,7 @@
 
     function initOnHandleTocOpenAndCollapse() {
         const toggle = document.getElementById('toc__toggle');
+        const nav = document.getElementById('TableOfContents');
         if(toggle != null){
             toggle.addEventListener('click', function () {
                 const isExpand = tocList.classList.contains('expand');
@@ -94,6 +95,13 @@
                         tocList.classList.add('expand');
                         tocList.classList.remove('collapse');
                     }
+            });
+        }
+
+        if(nav != null){
+            nav.addEventListener('click', (e) => {
+                tocList.classList.remove('expand');
+                tocList.classList.add('collapse');
             });
         }
     }
