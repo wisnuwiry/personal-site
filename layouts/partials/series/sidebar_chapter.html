@@ -1,9 +1,26 @@
+{{ $activeRelPermalink := .RelPermalink }}
+{{ $activeWeight := .Weight }}
+
 <div class="sidebar_chapter">
     <h3>CHAPTERS</h3>
     <div class="chapter">
         <div class="pr-1">
         {{ range .Parent.Pages.ByWeight }}
-        {{ partial "series/chapter_item.html" . }}
+            {{ if isset .Params "chapter_start" }}
+            <h3>{{ .Params.chapter_start }}</h3>
+            {{ end }}
+            <a href="{{ .Permalink }}">
+                <div class="chapter__item card {{ if eq $activeRelPermalink .RelPermalink }}active{{ end }}">
+                    <div class="icon">
+                        {{ if gt $activeWeight .Weight }}
+                        {{ partial "svg/complete.svg" }}
+                        {{ else }}
+                        {{ partial "svg/uncomplete.svg" }}
+                        {{ end }}
+                    </div>
+                    {{ .Params.title }}
+                </div>
+            </a>
         {{ end }}
         </div>
     </div>

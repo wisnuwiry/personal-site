@@ -10,5 +10,4 @@ contact: true
 page: true
 ---
 
-Contact me:<br>
-
+If you have any questions or want to contact me, please submit this contact form
