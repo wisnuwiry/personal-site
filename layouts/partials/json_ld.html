@@ -53,7 +53,7 @@
 	"@context": "http://schema.org",
 	"@type": "WebPage",
 	"name": "{{ .Params.title }}",
-	"url": " {{ .Site.BaseURL }}{{ .Permalink | absURL }}",
+	"url": "{{ .Permalink | absURL }}",
 	"description": "{{- with .Summary }}{{ . | plainify}}{{- end }}"
 }
 </script>
