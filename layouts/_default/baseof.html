@@ -20,7 +20,7 @@
 	<meta property="og:title" content="{{ .Params.title }}" />
 	<meta property="og:description" content="{{- with .Summary }}{{ . | plainify}}{{- end }}" />
 	<meta property="og:url" content="{{ .Permalink | absURL }}" />
-	<meta name="og:image" content="
+	<meta property="og:image" content="
 		{{if .Params.images }} 
 			{{- range first 1 .Params.images }} 
 				{{ . | absURL }} 
@@ -28,7 +28,8 @@
 		{{ else }}
 		{{.Site.Author.avatar | absURL}}{{ end}}" />
 	{{ end }}
-	<meta name="og:author" content="{{ .Site.Author.name }}"/>
+	<meta property="og:author" content="{{ .Site.Author.name }}"/>
+	<meta property="author" content="{{ .Site.Author.name }}"/>
 	{{ template "_internal/schema.html" .}}
 	{{- $cssTheme := resources.Get "css/theme.css" }}
 	{{- $cssMain := resources.Get "css/main.css" }}
