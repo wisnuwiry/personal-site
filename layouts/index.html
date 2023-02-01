@@ -6,7 +6,7 @@
 	</div>
 	{{- end }}
 	{{- $mainSections := .Site.Params.mainSections }}
-	{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" $mainSections) .Site.Params.paginateLength }}
+	{{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" $mainSections).ByDate.Reverse .Site.Params.paginateLength }}
 	{{- $featured := (where (where .Site.RegularPages "Type" "in" $mainSections) ".Params.featured" "=" true) }}
 	
 	{{ range first 1  $featured }}
