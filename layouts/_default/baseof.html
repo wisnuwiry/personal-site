@@ -14,22 +14,8 @@
 	{{ template "_internal/twitter_cards.html" . }}
 	<meta name="twitter:site" content="@{{ .Site.Params.Social.twitter }}" /> 
 	{{- end }}
-	{{ if not .IsPage }}
 	{{ template "_internal/opengraph.html" . }}
-	{{ else }}
-	<meta property="og:title" content="{{ .Params.title }}" />
-	<meta property="og:description" content="{{- with .Summary }}{{ . | plainify}}{{- end }}" />
-	<meta property="og:url" content="{{ .Permalink | absURL }}" />
-	<meta name="image" property="og:image" content="
-		{{if .Params.images }} 
-			{{- range first 1 .Params.images }} 
-				{{ . | absURL }} 
-			{{- end }}
-		{{ else }}
-		{{.Site.Author.avatar | absURL}}{{ end}}" />
-	{{ end }}
-	<meta name="author" property="og:author" content="{{ .Site.Author.name }}"/>
-	<meta name="author" content="{{ .Site.Author.name }}"/>
+	<meta name="og:author" content="{{ .Site.Params.Author.name }}"/>
 	{{ template "_internal/schema.html" .}}
 	{{- $cssTheme := resources.Get "css/theme.css" }}
 	{{- $cssMain := resources.Get "css/main.css" }}

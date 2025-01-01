@@ -2,9 +2,9 @@
 	<div>
 		<div class="feed__meta">
 			{{- if .Param "authorbox" }}
-				<img alt="{{ $.Site.Author.name }} avatar" data-src="{{ $.Site.Author.avatar | relURL }}" class="post__author-thumb lazyload" src="{{ "/img/placeholder.svg" | relURL }}">
+				<img alt="{{ $.Site.Params.Author.name }} avatar" data-src="/img/avatar.webp" class="post__author-thumb lazyload" src="{{ "/img/placeholder.svg" | relURL }}">
 				<div class="flex flex__column">
-					<a class="feed__author invert" href="/about">{{ $.Site.Author.name }}</a>
+					<a class="feed__author invert" href="/about">{{ $.Site.Params.Author.name }}</a>
 					{{- partial "entry/meta/date.html" . }}
 				</div>
 			{{- end }}
